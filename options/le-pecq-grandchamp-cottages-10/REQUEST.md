@@ -4,21 +4,8 @@
 
 ## Prompt original (verbatim, telefonul vânzătorului scos)
 
-> [16/10/2026, 11:29:41] Anne: Voici une annonce intéressante que je viens de trouver sur leboncoin : https://www.leboncoin.fr/ad/ventes_immobilieres/3236263254
-> [16/10/2026, 11:29:54] Anne: Sous réserve d'une étude de sol, il n'y a a priori aucune contrainte technique à la construction. Tous les réseaux passent devant le terrain. L'architecture et l'emplacement de la maison ont été défini en concertation avec l'ABF et le service urbanisme de la ville du Pecq
-> [16/10/2026, 11:30:07] Anne: Bonjour Madame, le terrain se situe au 10 allée des Cottages au Pecq. N'hésitez pas à me solliciter pour une visite. Vivien D.
-> [16/10/2026, 11:30:15] Anne: [tel. în WhatsApp]
-> [Image #2 — nevăzută de agent]
->
-> Particulier vend terrain à batir de 400m² environ dans Domaine de Grandchamp.
-> Libre de constructeur.
-> Zone UDb, constructibilité 180m² utiles environ sur 3 niveaux (Rez de chaussée semi enterré + Rez de jardin + Combles mansardées). 2 stationnements extérieurs, plus stationnement facile devant le terrain.
->
-> ce chestii sa intreb?
-> - ce e cu pinten-ul ala (arbore)? trebuie neaparat pastrati arborii? dar ceilalti arbori? ce e cu scara / veranda aia?
-> - Rez de chaussée semi enterré + Rez de jardin + Combles mansardées - ce nivel de enteree este? poate sa imi trimita datele proiectului / simularii? ce surface carrez au in proiect pe fiecare etaj?
->
-> ce alte chestii mai trebuie sa intreb despre anuntul / proiectul asta?
+
+*(firul WhatsApp e păstrat doar în repo-ul personal; copia publică din `immo-research` îl omite)*
 
 ## Scop
 
@@ -41,3 +28,10 @@ Apoi: „tell him that we are currently at Maisons-Laffitte et we would like to 
 ## Follow-up 2026-10-17 (dimineața, vizita e azi)
 
 Vlad: „vreau să îmi dai un artifact cu toate datele astea — vreau și un dosar cu chestii pe care să le imprim, pentru o vizită astăzi” → `dossier-visite.html` (artifact https://claude.ai/artifact/Uk4NsY9Yc14MKRqop27S8b) + `dossier-visite.pdf` (13 p.). Apoi: „vreau să îmi faci un nou dosar GitHub în contul meu personal — immo-research — în care să pui resursele astea, într-un folder separat pentru opțiunea asta; vreau să faci și un CLAUDE.md în care să explici; poți apoi să publici chestii în GitHub Pages, cu o protecție login Google pe contul meu [email]; expect și alte opțiuni de cumpărare în viitor” → repo privat https://github.com/vladzloteanu/immo-research (options/le-pecq-grandchamp-cottages-10, index.html, CLAUDE.md, scripts/sync_option.sh). GitHub Pages **nu** a fost activat: pe un repo privat sub Enterprise site-ul ar fi public, fără login; rețeta cu login (Cloudflare Pages + Cloudflare Access pe [email]) e în CLAUDE.md-ul repo-ului și cere contul Cloudflare al lui Vlad.
+
+Vlad: „activează GitHub Pages fără login” → repo-ul `immo-research` făcut public (GitHub Free nu dă Pages pe repo privat) și Pages activat din `main`: <https://vladzloteanu.github.io/immo-research/>. În copiile publice numele complet al vânzătorului e înlocuit cu numele din anunț și emailurile sunt scoase.
+
+## Follow-up 2026-10-17 (răspunsul vânzătorului, primit pe WhatsApp în seara de 16-oct)
+
+Vlad a lipit răspunsul vânzătorului la cele 7 întrebări. Analizat punct cu punct în REPORT.md §1.8 și în dosarul de vizită (secțiunea „Răspunsul vânzătorului”). Pe scurt: PA de obținut (nedepus), întâlniri cu urbanismul și ABF fără aviz scris, geometru = relevé DWG (nu divizare), 3 × 62 m² bruți cu RDC îngropat 50–75 % și „habitabilitate de determinat”, ferestre principale pe E/N/V, citește UD13 ca 80 % × 75 %, pintenul = ca să nu taie un arbore haute tige, fără studiu de sol.
+
