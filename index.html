@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Immo research</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,700&display=swap">
+<style>
+/* Layout: one column of option cards; same tokens as the dossiers so the site reads as one set. */
+:root{
+  --paper:#f6f7f2; --card:#ffffff; --ink:#1c231f; --muted:#5b665f; --line:#cfd6cc;
+  --accent:#3b6b48; --accent-soft:#e3ecdf; --warn:#a8701a; --warn-soft:#f6ead4;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif; --sans:"Source Sans 3","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--paper:#121714;--card:#181f1b;--ink:#e4e9e2;--muted:#9aa69d;--line:#2d3833;--accent:#8cc39a;--accent-soft:#1d2b22;--warn:#e0a94a;--warn-soft:#332a16;color-scheme:dark}
+}
+:root[data-theme="dark"]{--paper:#121714;--card:#181f1b;--ink:#e4e9e2;--muted:#9aa69d;--line:#2d3833;--accent:#8cc39a;--accent-soft:#1d2b22;--warn:#e0a94a;--warn-soft:#332a16;color-scheme:dark}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.45}
+.wrap{max-width:820px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px}
+h1{font-family:var(--serif);font-size:2rem;margin:0 0 4px;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 24px}
+h2{font-family:var(--serif);font-size:1.3rem;margin:0 0 4px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0;min-width:0}
+.meta{color:var(--muted);font-size:.92rem;margin:4px 0 10px}
+.status{display:inline-block;padding:2px 9px;border-radius:999px;background:var(--warn-soft);color:var(--warn);font-weight:700;font-size:.78rem;letter-spacing:.03em;text-transform:uppercase;vertical-align:middle;margin-left:6px}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.links a{padding:7px 12px;border-radius:8px;background:var(--accent-soft);color:var(--accent);text-decoration:none;font-weight:600;font-size:.92rem}
+.links a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+p{margin:6px 0}
+footer{color:var(--muted);font-size:.86rem;border-top:1px solid var(--line);padding-top:12px;margin-top:28px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Immo research</h1>
+  <p class="sub">Opțiunile de cumpărare pe care le studiem, fiecare cu dosarul ei de vizită. Site privat.</p>
+
+  <section class="card" id="le-pecq-grandchamp-cottages-10">
+    <h2>Allée des Cottages 10, Le Pecq <span class="status">în explorare</span></h2>
+    <p class="meta">Domaine de Grandchamp · lot de ~400 m² detașat din grădina vilei de la nr. 10 · leboncoin, vânzător particular · 320 000 € (fost 350 000 €) · vizită 17-10-2026</p>
+    <p>Casă de 72 m² la sol pe trei niveluri, pusă pe liniile de retragere minimă. De lămurit: ferestrele (UD7), cei 75 % verde, parcarea săpată, divizarea și avizul ABF scris.</p>
+    <div class="links">
+      <a href="options/le-pecq-grandchamp-cottages-10/dossier-visite.html">Dosar de vizită</a>
+      <a href="options/le-pecq-grandchamp-cottages-10/dossier-visite.pdf">PDF de imprimat</a>
+      <a href="options/le-pecq-grandchamp-cottages-10/REPORT.md">Raportul complet</a>
+      <a href="options/le-pecq-grandchamp-cottages-10/data/annonce/plan-de-masse-annonce.jpg">Planul din anunț</a>
+    </div>
+  </section>
+
+  <footer>Dosarele sunt deducțiile noastre din surse publice (PLU, SPR, cadastru, DVF, anunțuri); nu înlocuiesc planul geometrului, avizul ABF scris sau studiul de sol.</footer>
+</div>
+</body>
+</html>

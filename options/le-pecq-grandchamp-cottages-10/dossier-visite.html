@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Allée des Cottages 10</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+<style>
+/* Layout: one reading column (880px) in the register of a site dossier — serif section titles, sans body with tabular figures,
+   rule tables for the PLU, tappable checklists for the visit. Print: A4, one section per page, light tokens forced. */
+:root{
+  --paper:#f6f7f2; --card:#ffffff; --ink:#1c231f; --muted:#5b665f; --line:#cfd6cc;
+  --accent:#3b6b48; --accent-soft:#e3ecdf;
+  --warn:#a8701a; --warn-soft:#f6ead4; --bad:#a1372b; --bad-soft:#f4dcd7; --ok:#2d7147; --ok-soft:#dcefe0;
+  --map-bg:#eef1ea; --map-main:#dbe6d4; --map-side:#e9e0c8; --map-wood:#c5d8bf; --map-other:#f4f5f0; --map-line:#7d8a7f; --map-lot:#fff3e6;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"Source Sans 3","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#121714; --card:#181f1b; --ink:#e4e9e2; --muted:#9aa69d; --line:#2d3833;
+    --accent:#8cc39a; --accent-soft:#1d2b22; --warn:#e0a94a; --warn-soft:#332a16; --bad:#e07a6b; --bad-soft:#33201c; --ok:#7fc492; --ok-soft:#17301f;
+    --map-bg:#161d19; --map-main:#223127; --map-side:#2f2a1c; --map-wood:#1b2a20; --map-other:#1a211d; --map-line:#5c6a60; --map-lot:#3a2a1f;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#121714; --card:#181f1b; --ink:#e4e9e2; --muted:#9aa69d; --line:#2d3833;
+  --accent:#8cc39a; --accent-soft:#1d2b22; --warn:#e0a94a; --warn-soft:#332a16; --bad:#e07a6b; --bad-soft:#33201c; --ok:#7fc492; --ok-soft:#17301f;
+  --map-bg:#161d19; --map-main:#223127; --map-side:#2f2a1c; --map-wood:#1b2a20; --map-other:#1a211d; --map-line:#5c6a60; --map-lot:#3a2a1f;
+  color-scheme:dark;
+}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.45;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.wrap{max-width:880px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:14px 56px}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;margin:0}
+h1{font-size:1.9rem;line-height:1.15;font-weight:700}
+h2{font-size:1.45rem;font-weight:700;margin-bottom:6px}
+h3{font-size:1.08rem;font-weight:600;margin:18px 0 6px;font-family:var(--sans)}
+p{margin:6px 0}
+.sub{color:var(--muted);margin:6px 0 10px;font-size:.98rem}
+.lede{color:var(--muted);margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:.84rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+.chip.warn{background:var(--warn-soft);border-color:transparent;color:var(--warn);font-weight:600}
+.chip.bad{background:var(--bad-soft);border-color:transparent;color:var(--bad);font-weight:600}
+.chip.ok{background:var(--ok-soft);border-color:transparent;color:var(--ok);font-weight:600}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line);display:flex;gap:6px;overflow-x:auto;padding-block:8px;margin:12px 0 4px;scrollbar-width:none}
+nav a{white-space:nowrap;padding:6px 11px;border-radius:8px;background:var(--accent-soft);color:var(--accent);text-decoration:none;font-weight:600;font-size:.9rem}
+nav a:focus-visible,.check li:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+section{margin-block:30px;scroll-margin-top:64px}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{padding:7px 8px;border-top:1px solid var(--line);vertical-align:top;text-align:left}
+tr:last-child td{border-bottom:1px solid var(--line)}
+th{font-weight:600;color:var(--muted);font-size:.76rem;text-transform:uppercase;letter-spacing:.05em}
+td.k{font-weight:600;white-space:nowrap}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.facts td:first-child{font-weight:600;width:28%}
+.v{display:inline-block;padding:1px 7px;border-radius:6px;font-size:.76rem;font-weight:700;white-space:nowrap;vertical-align:middle}
+.v.ok{background:var(--ok-soft);color:var(--ok)}
+.v.warn{background:var(--warn-soft);color:var(--warn)}
+.v.bad{background:var(--bad-soft);color:var(--bad)}
+.v.wa{background:var(--accent-soft);color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:10px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0}
+.card h3{margin:0 0 6px;display:flex;gap:8px;align-items:center}
+.card.bad{border-left:4px solid var(--bad)} .card.warn{border-left:4px solid var(--warn)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.two>div{min-width:0}
+ul,ol{margin:6px 0;padding-left:1.25em}
+li{margin:3px 0}
+figure{margin:12px 0}
+figcaption{font-size:.86rem;color:var(--muted);margin-top:6px}
+.plan img,.ortho img{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+.cad{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;display:block}
+.sec{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:6px;background:var(--card)}
+.sec text{font-family:var(--sans);fill:currentColor}
+.check{list-style:none;padding:0;margin:0}
+.check li{display:flex;gap:10px;padding:7px 0;border-top:1px solid var(--line);align-items:flex-start;cursor:pointer}
+.check li:last-child{border-bottom:1px solid var(--line)}
+.box{flex:0 0 auto;width:20px;height:20px;border:1.5px solid var(--muted);border-radius:4px;margin-top:1px;position:relative;background:var(--card)}
+.check li.done .box{background:var(--accent);border-color:var(--accent)}
+.check li.done .box::after{content:"";position:absolute;left:6px;top:2px;width:5px;height:10px;border:solid #fff;border-width:0 2.2px 2.2px 0;transform:rotate(45deg)}
+.check li.done .txt{color:var(--muted);text-decoration:line-through}
+.txt{flex:1;min-width:0}
+.txt small{color:var(--muted)}
+button.reset{font:600 .85rem var(--sans);color:var(--muted);background:none;border:1px solid var(--line);border-radius:8px;padding:5px 10px;cursor:pointer;margin-top:10px}
+pre.msg{white-space:pre-wrap;font:inherit;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+.q li{margin:5px 0}
+.q .n{font-weight:700;color:var(--accent);margin-right:4px}
+footer{color:var(--muted);font-size:.84rem;border-top:1px solid var(--line);padding-top:10px;margin-top:30px}
+.dec{font-weight:700}
+@page{size:A4;margin:12mm 13mm 16mm;
+  @bottom-center{content:"Allée des Cottages 10 · Grandchamp · dosar de vizită 17-10-2026 · p. " counter(page) "/" counter(pages);font-family:"Source Sans 3",Arial,sans-serif;font-size:8pt;color:#6b756e}}
+@media print{
+  :root,:root[data-theme="dark"]{--paper:#fff;--card:#fff;--ink:#111;--muted:#555;--line:#bbb;--accent:#2f5c3b;--accent-soft:#e8efe4;--warn:#8a5a10;--warn-soft:#f6ead4;--bad:#8f2f25;--bad-soft:#f4dcd7;--ok:#256240;--ok-soft:#dcefe0;--map-bg:#eef1ea;--map-main:#dbe6d4;--map-side:#e9e0c8;--map-wood:#c5d8bf;--map-other:#f4f5f0;--map-line:#7d8a7f;--map-lot:#fff3e6}
+  body{font-size:10pt;line-height:1.35}
+  body::before{display:none}
+  .wrap{max-width:none;padding:0}
+  nav,.noprint{display:none!important}
+  section{margin-block:0 10mm;scroll-margin-top:0}
+  .page{break-before:page;page-break-before:always}
+  h1{font-size:20pt} h2{font-size:15pt;break-after:avoid;page-break-after:avoid} h3{font-size:11pt;break-after:avoid;page-break-after:avoid}
+  tr,li,figure,.card{break-inside:avoid;page-break-inside:avoid}
+  table{font-size:9pt} th,td{padding:4px 6px}
+  .plan img{max-height:196mm;width:auto;max-width:100%;display:block;margin:0 auto}
+  .ortho img{max-height:120mm;width:auto;max-width:100%;display:block;margin:0 auto}
+  .cad{max-height:118mm;width:auto;max-width:100%;margin:0 auto}
+  .sec{max-height:70mm;width:auto;max-width:100%;margin:0 auto}
+  .box{width:11pt;height:11pt;border-color:#333}
+  .check li{padding:4px 0}
+  a{color:inherit;text-decoration:none}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Allée des Cottages 10</h1>
+  <p class="sub">Domaine de Grandchamp · Le Pecq (78230) · lot de ~400 m² detașat din grădina vilei de la nr. 10 · dosar pentru vizita din <strong>17 octombrie 2026</strong></p>
+  <div class="chips">
+    <span class="chip">≈ 400 m² (contur dedus 402 m²)</span>
+    <span class="chip">320 000 € · 800 €/m²</span>
+    <span class="chip warn">redus de la 350 000 €</span>
+    <span class="chip">PLU zona UDb</span>
+    <span class="chip">SPR secteur AP2d · aviz conform ABF</span>
+    <span class="chip bad">argilă: expunere forte</span>
+    <span class="chip">vânzător particular „VivienD”</span>
+  </div>
+</header>
+
+<nav class="noprint" aria-label="Secțiuni">
+  <a href="#rezumat">Rezumat</a><a href="#plan">Plan</a><a href="#harta">Hartă</a><a href="#plu">PLU</a><a href="#vizita">Vizită</a><a href="#intrebari">Întrebări</a><a href="#pret">Preț</a><a href="#rezerve">Rezerve</a>
+</nav>
+
+<main>
+<section id="rezumat">
+  <h2>Rezumat într-o pagină</h2>
+  <p class="lede">Ce știm sigur (verificat pe surse publice), ce arată singura poză din anunț și ce rămâne de lămurit la fața locului.</p>
+
+  <div class="two">
+    <div>
+      <h3>Terenul</h3>
+      <div class="tbl"><table class="facts">
+        <tr><td>Lotul</td><td>Fâșia de est a parcelei <strong>AK 549</strong> (grădina vilei „Remarquable” de la nr. 10, 1 433 m²), de-a lungul aleii: <strong>22,19 m front</strong>, 17,21 m adâncime pe limita cu AK 484, pinten de 2,39 m în fund. Nu există încă în cadastru.</td></tr>
+        <tr><td>Vânzătorul</td><td>A cumpărat vila (AK 196 + 484 + 549) pe 25-05-2021 cu 942 028 €. Păstrează vila și <strong>AK 484</strong> (241 m², la sud de lot, 10,3 m front).</td></tr>
+        <tr><td>Relief</td><td>Aleea la 66,5 m (coboară spre nord la ~65,8); lotul la 67,2–67,4 la zidul de incintă, <strong>69,0–69,3 pe linia casei</strong>, terasa vilei la 70,30. Vreo 3 m cădere spre alee, cea mai abruptă în primii 5 m.</td></tr>
+        <tr><td>Reguli</td><td>PLU <strong>UDb</strong>: emprise 20 % (80 m²), 7 m streașină / 10 m coamă de la terenul natural, 5 m de alee, <strong>8 m cu ferestre / 4 m fără</strong>, 75 % verde. <strong>SPR AP2d</strong>: aviz conform ABF pe orice autorizație; arbori cu > 100 cm circumferință la 1 m intangibili; 1 arbore înalt / 200 m²; gard obligatoriu. <strong>Argilă forte</strong> → studiu G1 datorat de vânzător. <strong>ASA</strong> din 1929: alei private, rețea pluvială, cotizație ~700–1 145 €/an (neverificat).</td></tr>
+        <tr><td>Divizarea</td><td>Din 1-sep-2026 = <em>déclaration préalable</em> cu aviz ABF (permis d'aménager doar dacă se creează echipamente comune). <strong>Stadiul: necunoscut.</strong></td></tr>
+      </table></div>
+    </div>
+    <div>
+      <h3>Proiectul din anunț (planul de masă)</h3>
+      <div class="tbl"><table class="facts">
+        <tr><td>Casa</td><td><strong>72 m² la sol</strong> (max 80), ≈ 6,6 × 10,9 m, decupaj de 1,5 × 1,5 m în jurul unui arbore; „1 étage + comble”.</td></tr>
+        <tr><td>Cote</td><td>RDC <strong>68,50</strong> · streașină <strong>73,50</strong> · coamă <strong>76,40</strong>. Încape în 7/10 m cu ~1,5 m rezervă, dar sunt doar <strong>5,0 m pentru RDC + etaj</strong>.</td></tr>
+        <tr><td>Poziție</td><td>Exact pe liniile minime: <strong>4,00 m</strong> de AK 484 (sud), <strong>5,00 m</strong> de alee, 4–6 m de limita nouă (spate și nord).</td></tr>
+        <tr><td>Parcare</td><td>2 locuri <strong>în tandem</strong>, bandă 3,5 m, săpate la cota aleii (65,75) cu zid de sprijin (acrotère 68,50), în colțul NE.</td></tr>
+        <tr><td>Acces</td><td>Scară pietonală nouă 66,50 → 68,50 cu <strong>portiță nouă în zidul de incintă</strong>, la capătul de sud. Nu există nicio verandă.</td></tr>
+        <tr><td>Rețele</td><td>Desenate: apă, electricitate, gaz, linia BT din alee. <strong>Lipsesc EU și EP</strong> (canalizarea).</td></tr>
+        <tr><td>Suprafețe</td><td>„180 m² utiles” ≈ 72 × 2,5 niveluri, bruți. Habitabil real ≈ <strong>145–155 m²</strong>; surface de plancher ≈ 150–165 → arhitect obligatoriu.</td></tr>
+      </table></div>
+    </div>
+  </div>
+
+  <h3>Cele trei probleme pe care planul le arată singur</h3>
+  <div class="grid">
+    <div class="card bad"><h3><span class="v bad">UD7</span> Ferestrele</h3><p>La 4 m de limită nu ai voie ferestre normale (allège sub 1,90 m); regula cere <strong>8 m</strong>. Rămân fațada spre alee (est) și ~6 m din fațada nord. Dacă esquisse-ul are ferestre pe sud sau vest, nu e conform.</p></div>
+    <div class="card warn"><h3><span class="v warn">UD13</span> 75 % verde</h3><p>Pe plan: 404 − 72 casă − ~37 parcare − ~6 scară ≈ <strong>289 m² = 71–72 %</strong>. Trebuie 303 m², din care 227 m² pământ plin. Nu iese fără parcare mai mică sau lot mai mare.</p></div>
+    <div class="card warn"><h3><span class="v warn">Lucrare</span> Parcarea săpată</h3><p>Groapă de <strong>1,75–2,75 m</strong> și ~25 m de zid de sprijin în argilă cu expunere forte, lângă grădina vilei (rămâne cu 1,8 m deasupra). Lucrarea grea a proiectului; G2 serios; tandemul e la aprecierea urbanismului.</p></div>
+  </div>
+
+  <div class="two">
+    <div>
+      <h3>Ce e în regulă</h3>
+      <ul>
+        <li>Prețul e la nivelul pieței: teren gol vândut în domeniu la 808 €/m² (2021); loturi de 700 m² listate la 800–860 €/m².</li>
+        <li>Înălțimile încap: streașina la 4,2–5,5 m și coama la 7,1–8,4 m peste terenul natural.</li>
+        <li>Nimic de demolat pe fâșie; platou la ~69 m pe linia casei.</li>
+        <li>Vizavi, triunghiurile împădurite AK 167/168 sunt <em>espace paysager protégé</em>: vederea rămâne.</li>
+        <li>SPR-ul nu dictează arhitectura unei case noi (doar peisaj, garduri, arbori).</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Nu se semnează nimic fără</h3>
+      <ul>
+        <li><span class="dec">Autorizația de divizare</span> (DP/PA) acordată și purjată de recursuri.</li>
+        <li><span class="dec">Avizul ABF scris</span>, nu „concertare”.</li>
+        <li><span class="dec">Planul geometrului</span> și bornajul (suprafața exactă hors voirie).</li>
+        <li><span class="dec">Studiul G1</span> (obligația vânzătorului).</li>
+        <li>Răspuns pe hârtie la <span class="dec">ferestre</span> și la <span class="dec">75 %</span>.</li>
+      </ul>
+      <h3>Levier</h3>
+      <p>AK 484 (241 m², 10,3 m front) rămâne la vânzător, lipită de sud. Cu ea lotul ar avea ~645 m², 129 m² emprise, și limita de sud ar dispărea → ferestre pe sud. De întrebat de ce nu e inclusă (probabil parcările vilei).</p>
+    </div>
+  </div>
+</section>
+
+<section id="plan" class="page">
+  <h2>Planul de masă din anunț</h2>
+  <p class="lede">Singura imagine a anunțului (694 × 800 px). Planul e <strong>rotit</strong>: aleea e jos, <strong>nordul e la dreapta</strong>, fundul grădinii (vest) e sus. Cote în cm, niveluri NGF. Liniile roșii punctate = retragerile minime.</p>
+  <figure class="plan">
+    <img src="data/annonce/plan-de-masse-annonce.jpg" alt="Planul de masă din anunț: lotul, casa de 72 m², parcarea săpată, scara, arborii și cotele de nivel" width="694" height="800">
+    <figcaption>Planul de masă publicat în anunț (leboncoin 3236263254), citit pe 16-oct-2026. Cifrele mici (65,75 / 662⁵) sunt la limita lizibilității.</figcaption>
+  </figure>
+
+  <h3>Cum se citește</h3>
+  <div class="tbl"><table>
+    <tr><th>Element</th><th>Pe plan</th><th>În realitate</th></tr>
+    <tr><td class="k">Conturul</td><td>22,19 m pe alee (jos) · 17,21 m latura stângă · pinten plantat (verde închis) cu laturi 8,94 / 2,39 m · diagonală lungă · 7,96 m înapoi la alee</td><td>Frontul = tot frontul AK 549 pe alee (cadastru 22,03 m). Latura de 17,21 m = limita cu AK 484 (sud). Pintenul = colțul SV, înfipt în gazonul vilei. Diagonala + 7,96 m = linie nouă prin grădina vilei.</td></tr>
+    <tr><td class="k">Casa</td><td>„EMPRISE AU SOL 72,00 m²”, „HABITATION 1 ÉTAGE + COMBLE”; cote 662⁵ × 1 089⁵; decupaj 150 × 150 în colțul din față-stânga, în jurul unui arbore (Ø 150, coroană ~5,5 m)</td><td>Așezată pe liniile de retragere minimă: 4,00 m de AK 484, 5,00 m de alee, 4–6 m de limita nouă. Fațada cu ferestre posibile = est (alee) + ~6 m din nord.</td></tr>
+    <tr><td class="k">Niveluri</td><td>„NIVEAU REF RCH MAISON 68,50” · „ÉGOUT 73,50” · „FAÎTAGE 76,40”; teren 69,25 / 69,00 / 69,10 / 69,04 / 69,03 lângă casă, 68,51 spre alee, 67,24 / 67,36 la zid, 66,49 pe alee</td><td>RDC la 0,5–0,8 m sub grădină pe 3 laturi și la nivel spre alee: „semi-enterré” e generos. 68,50 → 73,50 = 5,0 m pentru două niveluri. „Rez-de-jardin” la ~71 m nu dă pe nicio grădină (69,0–69,3).</td></tr>
+    <tr><td class="k">Parcarea</td><td>2 mașini în tandem, bandă 3,50 m, „NIVEAU STATIONNEMENTS 65,75” (sau 66,75), zid curb „ACROTÈRE 68,50” + scară spre grădină, „ACCÈS À CRÉER”</td><td>Colțul NE, lângă limita de nord și linia nouă. Groapă de 1,75–2,75 m, ~10,5 m lungime, zid de sprijin pe 2–3 laturi. Cota e sub nivelul aleii de la capătul sudic (66,49): aleea coboară spre nord.</td></tr>
+    <tr><td class="k">Scara</td><td>Stânga jos: două ziduri paralele, trepte, „NIVEAU REF 66,50” → „68,50”, „ACCÈS À CRÉER PORTILLON”</td><td>Capătul de sud al frontului: ~2 m urcare pe ~4,7 m, portiță nouă în zidul de incintă al domeniului (SPR: zidul se păstrează; portița cere aviz).</td></tr>
+    <tr><td class="k">„Veranda”</td><td>Nu există. Hașurile sunt casa, groapa parcării și, sus-dreapta, „Terrasse S: 70,30” cu trepte 69,42 → 70,23</td><td>Terasa e a vilei (NV de lot, ~10 m de limită), cu 1,8 m deasupra RDC-ului nou: vila privește de sus peste parcare și fațada nord.</td></tr>
+    <tr><td class="k">Arborii</td><td>5–6 coroane punctate: una mare în decupajul casei, trei în banda de 5 m de la alee (Ø 3,5–5 m), una lângă parcare, un „x” în pinten; verde închis = benzi plantate pe limite</td><td>Arborele din decupaj e la 0,75 m de fundație: dacă are > 100 cm circumferință e intangibil (SPR) și e risc tehnic (rădăcini în argilă).</td></tr>
+    <tr><td class="k">Rețele</td><td>„RACCORDEMENTS MAISON PROJETÉE — EAU / ELEC / GAZ” în colțul SE, „ELEC BASSE TENSION” în alee, marcaje de secțiune B–B</td><td>Lipsesc EU și EP. Secțiunea B–B există la arhitect → de cerut.</td></tr>
+  </table></div>
+
+  <h3>Secțiuni deduse din cote</h3>
+  <p class="lede">Schițe la scară din cotele planului. Nu sunt secțiunile arhitectului (acelea trebuie cerute).</p>
+  <figure>
+    <svg class="sec" viewBox="0 0 360 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Secțiune est-vest prin casă">
+      <polygon points="0,110 40,110 40,102 90,85 199,82 262,82 262,150 0,150" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="0.8"/>
+      <rect x="38" y="100" width="4" height="12" fill="var(--muted)"/>
+      <line x1="244" y1="60" x2="244" y2="82" stroke="var(--bad)" stroke-width="0.8" stroke-dasharray="3 2"/>
+      <line x1="85" y1="15" x2="210" y2="15" stroke="var(--warn)" stroke-width="0.8" stroke-dasharray="3 2"/>
+      <rect x="90" y="40" width="109" height="50" fill="var(--card)" stroke="var(--ink)" stroke-width="1.1"/>
+      <polygon points="90,40 144.5,11 199,40" fill="var(--card)" stroke="var(--ink)" stroke-width="1.1"/>
+      <line x1="90" y1="65" x2="199" y2="65" stroke="var(--muted)" stroke-width="0.7" stroke-dasharray="3 2"/>
+      <line x1="300" y1="72" x2="360" y2="72" stroke="var(--muted)" stroke-width="0.9" stroke-dasharray="3 2"/>
+      <g stroke="var(--ink)" stroke-width="0.7"><line x1="212" y1="40" x2="212" y2="90"/><line x1="209" y1="40" x2="215" y2="40"/><line x1="209" y1="90" x2="215" y2="90"/></g>
+      <g stroke="var(--bad)" stroke-width="0.7"><line x1="205" y1="82" x2="205" y2="90"/><line x1="203" y1="82" x2="207" y2="82"/><line x1="203" y1="90" x2="207" y2="90"/></g>
+      <g font-size="5.2">
+        <text x="3" y="121">alee 66,5</text>
+        <text x="44" y="119">zid de incintă ~67,3</text>
+        <text x="47" y="78">banda de 5 m, plantată</text>
+        <text x="120" y="78">teren natural 69,0 – 69,3</text>
+        <text x="94" y="88">RDC 68,50</text>
+        <text x="94" y="62">étage ≈ 71,0 („rez-de-jardin” ?)</text>
+        <text x="94" y="37">streașină 73,50</text>
+        <text x="144.5" y="8" text-anchor="middle">coamă 76,40</text>
+        <text x="216" y="63">5,0 m pentru</text><text x="216" y="69">două niveluri</text>
+        <text x="209" y="97" fill="var(--bad)">0,5–0,8 m sub grădină</text>
+        <text x="87" y="12" fill="var(--warn)">limita UD10: teren + 7 m ≈ 76,0 (streașină)</text>
+        <text x="247" y="60" fill="var(--bad)">limita nouă</text><text x="247" y="66" fill="var(--bad)">la 4–6 m de casă</text>
+        <text x="300" y="69">terasa vilei 70,30</text><text x="300" y="80">(NV, în afara secțiunii)</text>
+        <text x="300" y="138">5 m</text>
+      </g>
+      <g stroke="var(--ink)" stroke-width="0.9"><line x1="300" y1="143" x2="350" y2="143"/><line x1="300" y1="140" x2="300" y2="146"/><line x1="350" y1="140" x2="350" y2="146"/></g>
+    </svg>
+    <figcaption>Secțiune est → vest prin casă (stânga = aleea). Cote NGF de pe plan; acoperișul e schematic (planul spune „combles”, probabil mansardă).</figcaption>
+  </figure>
+  <figure>
+    <svg class="sec" viewBox="0 0 300 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Secțiune prin parcarea săpată">
+      <polygon points="0,57 40,57 40,57.5 145,57.5 145,30 148,30 170,25 300,21 300,110 0,110" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="0.8"/>
+      <polygon points="40,42 90,25 145,23 145,57.5 40,57.5" fill="var(--bad-soft)" stroke="var(--bad)" stroke-width="0.8" stroke-dasharray="3 2"/>
+      <rect x="37" y="42" width="3" height="15" fill="var(--muted)"/>
+      <rect x="145" y="30" width="3" height="27.5" fill="var(--muted)"/>
+      <rect x="48" y="43.5" width="44" height="14" rx="2" fill="var(--muted)" fill-opacity="0.45" stroke="var(--ink)" stroke-width="0.6"/>
+      <rect x="98" y="43.5" width="44" height="14" rx="2" fill="var(--muted)" fill-opacity="0.45" stroke="var(--ink)" stroke-width="0.6"/>
+      <rect x="245" y="12" width="55" height="9" fill="var(--card)" stroke="var(--ink)" stroke-width="0.8"/>
+      <g font-size="5">
+        <text x="3" y="66">alee ~65,8</text>
+        <text x="60" y="66">cota parcării 65,75</text>
+        <text x="60" y="73">2 locuri în tandem, bandă 3,5 m</text>
+        <text x="92" y="38" text-anchor="middle" fill="var(--bad)">săpătură 1,75 – 2,75 m</text>
+        <text x="92" y="20" text-anchor="middle">terenul actual (punctat)</text>
+        <text x="150" y="28">acrotère 68,50 — zid de sprijin ~25 m liniari</text>
+        <text x="200" y="18">grădina vilei 69,0 – 69,4</text>
+        <text x="247" y="10">terasa vilei 70,30</text>
+        <text x="10" y="98">5 m</text>
+        <text x="38" y="40" fill="var(--muted)">zid de incintă</text>
+      </g>
+      <g stroke="var(--ink)" stroke-width="0.9"><line x1="10" y1="103" x2="60" y2="103"/><line x1="10" y1="100" x2="10" y2="106"/><line x1="60" y1="100" x2="60" y2="106"/></g>
+    </svg>
+    <figcaption>Secțiune est → vest prin colțul NE (parcarea). Groapa coboară la cota aleii; zidul de sprijin urcă până la 68,50 lângă grădina vilei. Dacă cifra e 66,75, groapa e cu 1 m mai mică.</figcaption>
+  </figure>
+</section>
+
+<section id="harta" class="page">
+  <h2>Unde e lotul pe cadastru</h2>
+  <figure class="ortho">
+    <img src="data/site-cadastre-ortho-180m.jpg" alt="Ortofoto IGN cu parcelele cadastrale din jurul vilei de la 10 allée des Cottages" width="1200" height="1200">
+    <figcaption>Ortofoto IGN + cadastru, ~180 m lățime, nord sus. Punctul roșu = adresa BAN (cade pe AK 484). Vila nr. 10 e pe AK 549; lotul = fâșia dintre vilă și alee. Vizavi, triunghiurile împădurite AK 167/168. Aleea (AK 196) e parcela comună a domeniului.</figcaption>
+  </figure>
+  <figure>
+    <svg class="cad" viewBox="0 0 86.0 62.0" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cadastru cu lotul dedus">
+<style>.cad text{font-family:"Source Sans 3","Helvetica Neue",Arial,sans-serif;fill:currentColor}.cad .lbl{font-size:1.55px}.cad .sm{font-size:1.25px}.cad .dim{font-size:1.3px;font-weight:600}</style>
+<rect x="0" y="0" width="86.0" height="62.0" fill="var(--map-bg)"/>
+<path d="M63.21,21.37 L62.70,29.04 L61.57,43.35 L48.70,41.82 L30.89,39.98 L10.29,22.52 L14.64,17.58 L26.50,3.68 L33.06,-2.61 L60.68,21.14 Z" fill="var(--map-main)" stroke="var(--map-line)" stroke-width="0.25"/>
+<path d="M61.57,43.35 L60.85,53.60 L43.97,51.46 L34.65,43.25 L30.89,39.98 L48.70,41.82 Z" fill="var(--map-side)" stroke="var(--map-line)" stroke-width="0.25"/>
+<path d="M60.85,53.60 L60.13,62.11 L59.04,78.22 L53.35,79.35 L45.55,71.48 L29.61,55.97 L30.25,48.27 L30.89,39.98 L34.65,43.25 L43.97,51.46 Z" fill="var(--map-other)" stroke="var(--map-line)" stroke-width="0.25"/>
+<path d="M63.27,20.14 L63.21,21.37 L60.68,21.14 L33.06,-2.61 L34.56,-4.11 Z" fill="var(--map-other)" stroke="var(--map-line)" stroke-width="0.25"/>
+<path d="M64.49,6.42 L63.27,20.14 L34.56,-4.11 L28.12,-9.63 L35.09,-19.66 L36.48,-18.53 Z" fill="var(--map-other)" stroke="var(--map-line)" stroke-width="0.25"/>
+<path d="M59.04,78.22 L58.28,88.66 L45.49,76.30 L29.43,60.86 L12.19,56.40 L11.32,55.02 L-4.40,39.00 L4.03,29.42 L10.29,22.52 L30.89,39.98 L30.25,48.27 L29.61,55.97 L45.55,71.48 L53.35,79.35 Z" fill="var(--map-other)" stroke="var(--map-line)" stroke-width="0.25"/>
+<path d="M103.03,57.24 L98.23,62.26 L89.26,72.08 L80.91,82.11 L72.19,92.34 L65.97,91.80 L68.22,60.55 L69.99,38.78 L71.24,20.64 L81.84,32.73 Z" fill="var(--map-wood)" stroke="var(--map-line)" stroke-width="0.25"/>
+<path d="M53.77,127.10 L62.67,116.29 L97.01,75.90 L105.03,66.34 L113.79,57.39 L134.03,80.31 L120.73,81.41 L113.12,82.24 L108.12,85.84 L97.24,95.07 L83.87,109.23 L61.66,134.30 Z" fill="var(--map-wood)" stroke="var(--map-line)" stroke-width="0.25"/>
+<path d="M58.28,88.66 L57.41,99.06 L56.74,104.29 L49.64,101.79 L35.96,97.18 L27.12,94.16 L21.14,84.12 L26.31,69.17 L29.43,60.86 L45.49,76.30 Z" fill="var(--map-other)" stroke="var(--map-line)" stroke-width="0.25"/>
+<path d="M73.51,-15.36 L70.90,-12.75 L69.24,-10.55 L66.16,-4.15 L65.06,0.33 L64.49,6.42 L36.48,-18.53 L40.86,-24.74 L40.41,-25.39 L45.58,-37.01 L48.87,-40.11 L59.78,-29.18 L64.49,-24.45 Z" fill="var(--map-other)" stroke="var(--map-line)" stroke-width="0.25"/>
+<text class="lbl" x="64.99" y="32.36" transform="rotate(94.3 64.99 32.36)" text-anchor="middle">allée des Cottages (AK 196, privată, ASA)</text>
+<text class="lbl" x="37.23" y="14.79" text-anchor="middle">AK 549 · vila nr. 10 · 1 433 m²</text>
+<text class="lbl" x="45.77" y="46.07" text-anchor="middle">AK 484 · 241 m²</text>
+<text class="lbl" x="44.83" y="58.37" text-anchor="middle">AK 530 · 637 m²</text>
+<text class="lbl" x="46.96" y="9.98" text-anchor="middle">AK 548 · 94 m²</text>
+<text class="lbl" x="43.67" y="-4.23" text-anchor="middle">AK 485 · 514 m²</text>
+<text class="lbl" x="29.67" y="57.25" text-anchor="middle">AK 562 · 921 m²</text>
+<text class="lbl" x="80.09" y="63.05" text-anchor="middle">AK 167 · pădure · espace paysager protégé</text>
+<text class="lbl" x="95.92" y="92.62" text-anchor="middle">AK 168 · pădure</text>
+<text class="lbl" x="40.75" y="87.56" text-anchor="middle">AK 561</text>
+<text class="lbl" x="57.37" y="-18.11" text-anchor="middle">AK 162</text>
+<path d="M61.57,43.35 L44.48,41.32 L36.43,37.14 L36.61,34.76 L55.29,20.65 L63.21,21.37 Z" fill="var(--map-lot)" stroke="var(--bad)" stroke-width="0.45" stroke-dasharray="1.2 0.7"/>
+<path d="M56.60,42.76 L58.25,20.78" stroke="var(--bad)" stroke-width="0.15" stroke-dasharray="0.6 0.5" fill="none"/>
+<path d="M61.87,39.36 L35.06,36.18" stroke="var(--bad)" stroke-width="0.15" stroke-dasharray="0.6 0.5" fill="none"/>
+<path d="M56.90,38.77 L46.08,37.49 L46.57,30.91 L57.40,32.19 Z" fill="var(--card)" stroke="var(--ink)" stroke-width="0.3"/>
+<path d="M56.90,38.77 L55.41,38.59 L55.53,37.10 L57.01,37.27 Z" fill="var(--map-lot)" stroke="var(--ink)" stroke-width="0.2"/>
+<path d="M63.14,22.37 L52.71,21.13 L52.45,24.62 L62.88,25.86 Z" fill="var(--bad-soft)" stroke="var(--bad)" stroke-width="0.25"/>
+<path d="M61.57,43.35 L56.90,42.79 L57.01,41.40 L61.67,41.95 Z" fill="var(--muted)" fill-opacity="0.6" stroke="var(--ink)" stroke-width="0.15"/>
+<circle cx="56.21" cy="37.93" r="2.6" fill="none" stroke="var(--ok)" stroke-width="0.2" stroke-dasharray="0.5 0.4"/>
+<circle cx="56.21" cy="37.93" r="0.35" fill="var(--ok)"/>
+<text class="dim" x="51.74" y="35.24" text-anchor="middle">casă 72 m²</text>
+<text class="sm" x="51.74" y="36.84" text-anchor="middle">RDC 68,50</text>
+<text class="sm" x="57.80" y="23.89" text-anchor="middle">parcare 2 tandem</text>
+<text class="sm" x="57.80" y="25.39" text-anchor="middle">săpată la 65,75</text>
+<text class="sm" x="35.92" y="35.15" text-anchor="end">pinten 2,39 m</text>
+<text class="dim" x="63.49" y="32.36" transform="rotate(-85.7 63.49 32.36)" text-anchor="middle">22,19 m (front = tot frontul AK 549)</text>
+<text class="dim" x="53.02" y="43.43" transform="rotate(6.8 53.02 43.43)" text-anchor="middle">17,21 m pe limita cu AK 484</text>
+<text class="dim" x="59.25" y="19.91" transform="rotate(5.2 59.25 19.91)" text-anchor="middle">7,96 m</text>
+<text class="dim" x="39.55" y="38.63" transform="rotate(27.4 39.55 38.63)" text-anchor="middle">8,94 m</text>
+<text class="dim" x="45.35" y="26.81" transform="rotate(-37.1 45.35 26.81)" text-anchor="middle">linie nouă de divizare (dedusă)</text>
+<text class="sm" x="56.71" y="41.00" text-anchor="end">scară + portillon nou</text>
+<g stroke="currentColor" stroke-width="0.3" fill="currentColor"><line x1="81.0" y1="11" x2="81.0" y2="6"/><polygon points="81.0,4.8 80.0,7 82.0,7"/></g>
+<text class="dim" x="81.0" y="13.2" text-anchor="middle">N</text>
+<g stroke="currentColor" stroke-width="0.35"><line x1="62.0" y1="59.0" x2="72.0" y2="59.0"/><line x1="62.0" y1="58.2" x2="62.0" y2="59.8"/><line x1="72.0" y1="58.2" x2="72.0" y2="59.8"/></g>
+<text class="sm" x="67.0" y="58.0" text-anchor="middle">10 m</text>
+</svg>
+    <figcaption>Parcelele din cadastru (apicarto) cu <strong>conturul lotului dedus</strong> din cotele planului (≈ 402 m²), casa pe liniile de 5 m / 4 m, parcarea și scara. Linia de divizare (punctată roșu) e deducția noastră din lungimi; o confirmă doar planul geometrului.</figcaption>
+  </figure>
+</section>
+
+<section id="plu" class="page">
+  <h2>PLU UDb față în față cu planul</h2>
+  <p class="lede">Regulamentul aprobat pe 18-12-2024, articolele zonei UD, aplicate la 400 m² și la planul din anunț.</p>
+  <div class="tbl"><table>
+    <tr><th>Regulă</th><th>UDb</th><th>Pe plan</th><th>Verdict</th></tr>
+    <tr><td class="k">Emprise (UD9)</td><td>20 %, max 300 m², hors voirie comună</td><td>80 m² maxim; declarat 72 m² (18 %); rămân 8 m² pentru orice anexă</td><td><span class="v ok">încape</span></td></tr>
+    <tr><td class="k">Înălțime (UD10)</td><td>7 m streașină / 10 m coamă, de la terenul natural în orice punct</td><td>73,50 / 76,40 cu teren la 68,0–69,3 → 4,2–5,5 m / 7,1–8,4 m; dar 5,0 m între RDC și streașină</td><td><span class="v ok">încape</span> <span class="v warn">plafoane?</span></td></tr>
+    <tr><td class="k">Retragere alee (UD6)</td><td>≥ 5 m de la calea privată</td><td>5,00 m exact</td><td><span class="v ok">la limită</span></td></tr>
+    <tr><td class="k">Limite separative (UD7)</td><td>cu ferestre: L ≥ H, min 8 m · fără ferestre: L ≥ H/2, min 4 m (nu e „baie”: allège ≥ 1,90 m, ușă opacă, jour de souffrance, sticlă opacă fixă)</td><td>4,00 m sud · 4–6 m spate · 4–10 m nord → ferestre adevărate doar spre alee (est) și pe ~6 m din nord</td><td><span class="v bad">problemă</span></td></tr>
+    <tr><td class="k">Spații verzi (UD13)</td><td>75 % vegetalizat, din care 75 % pământ plin; doar aleile pietonale permeabile se numără</td><td>≈ 289 m² = 71–72 % (trebuie 303 / 227 m²)</td><td><span class="v bad">nu iese</span></td></tr>
+    <tr><td class="k">Parcare (UD12, UD3)</td><td>2 locuri / logement, „maniabilité aisée”; rampă ≤ 10 % pe primii 4 m</td><td>2 locuri în tandem, 3,5 m, săpate cu zid de sprijin</td><td><span class="v warn">la apreciere</span></td></tr>
+    <tr><td class="k">Aspect (UD11)</td><td>≥ 2 pante pot fi impuse; lucarne ≤ ¼ din pan; nuanțierul comunei; fără „relief artificiel conséquent”; incinta de piatră se păstrează; aviz ABF</td><td>Semi-îngropare prin săpătură (teren peste RDC pe 3 laturi); portiță nouă în zid</td><td><span class="v warn">aviz ABF</span></td></tr>
+    <tr><td class="k">Terasamente (UD1)</td><td>Săpături fără legătură cu construcția interzise</td><td>Groapa parcării e „liée à la construction” → admisă, dar lucrare mare</td><td><span class="v warn">lucrare</span></td></tr>
+    <tr><td class="k">Risc inundație (UD2)</td><td>Arrêté ru de Buzot, „secteur B”, Annexe I</td><td>Pe harta 5.3.d zonele albastre sunt la marginea NV a domeniului, nu la parcelă; de confirmat în ERP</td><td><span class="v ok">probabil nu</span></td></tr>
+    <tr><td class="k">Rețele (UD4)</td><td>Racord obligatoriu apă + canalizare; pluvial în colector, altfel pe cheltuiala proprietarului</td><td>Planul arată EAU / ELEC / GAZ + BT, nu EU/EP</td><td><span class="v warn">de întrebat</span></td></tr>
+    <tr><td class="k">SPR AP2d</td><td>Arbori > 100 cm circumferință intangibili (înlocuire obligatorie); 1 arbore înalt / 200 m² liberi; retragerea de 5 m plantată; gard obligatoriu (mur bahut ≤ ⅓ din 2 m + grilaj / gard viu); vila nr. 10 „Remarquable”</td><td>5–6 arbori păstrați, unul în decupajul casei; portiță în zid; divizarea grădinii unei vile repérate</td><td><span class="v warn">aviz ABF</span></td></tr>
+  </table></div>
+  <p>Consecințe automate: habitabil ≈ 145–155 m², surface de plancher ≈ 150–165 m² → arhitect obligatoriu (> 150 m²). Vânzare între particulari → droits de mutation ~5,8 % + emolumente ≈ 7–8 % (~24–26 k€).</p>
+</section>
+
+<section id="vizita" class="page">
+  <h2>La fața locului: ce verifici, ce măsori, ce fotografiezi</h2>
+  <p class="lede">Ia cu tine: ruletă (≥ 5 m) sau metru de croitorie pentru circumferințe, telefonul (busolă, nivelă, foto), planul imprimat, pix. Bifele se păstrează pe telefonul ăsta.</p>
+
+  <h3>1. Pe alee, înainte să intri</h3>
+  <ul class="check" data-group="alee">
+    <li data-k="a1" tabindex="0"><span class="box"></span><span class="txt">Lățimea aleii și sensul: încape o mașină oprită în fața lotului fără să blocheze? E cale privată a ASA, deci regulile sunt ale lor.</span></li>
+    <li data-k="a2" tabindex="0"><span class="box"></span><span class="txt">Panta aleii: capătul de sud al frontului (66,5) → nord (~65,8). Se vede căderea?</span></li>
+    <li data-k="a3" tabindex="0"><span class="box"></span><span class="txt">Zidul de incintă din piatră: înălțime, stare, continuitate pe tot frontul de 22 m. Unde ar intra <strong>portița</strong> (capătul de sud) și <strong>intrarea parcării</strong> (capătul de nord)? <small>Foto.</small></span></li>
+    <li data-k="a4" tabindex="0"><span class="box"></span><span class="txt">Capace și regards în alee: canalizare (EU), pluvial (EP), apă, gaz, coffret electric. Planul arată doar apă/elec/gaz + BT. <small>Foto la fiecare capac.</small></span></li>
+    <li data-k="a5" tabindex="0"><span class="box"></span><span class="txt">Vizavi: pădurea de pe AK 167/168 (protejată). Cât umbrește dimineața? Ce se vede din lot?</span></li>
+    <li data-k="a6" tabindex="0"><span class="box"></span><span class="txt">Vecinii de la nord: fâșia AK 548 (94 m²) și AK 485. Ce e acolo (garaj, grădină)? Ferestre spre lot?</span></li>
+    <li data-k="a7" tabindex="0"><span class="box"></span><span class="txt">Panou de afișaj al unei autorizații (DP/PA) pe teren sau pe zid? <small>Foto dacă există.</small></span></li>
+  </ul>
+
+  <h3>2. Pe lot</h3>
+  <ul class="check" data-group="lot">
+    <li data-k="l1" tabindex="0"><span class="box"></span><span class="txt">Cotele: cât e lotul deasupra aleii la zid (~0,8 m) și cât urcă în primii 5 m (până la ~69,0)? E abrupt cum arată planul?</span></li>
+    <li data-k="l2" tabindex="0"><span class="box"></span><span class="txt">Pășește casa: <strong>5 m de la alee, 4 m de la limita cu AK 484</strong> → colțul din față-sud; apoi 10,9 m în adâncime și 6,6 m în lățime. Ce arbori rămân în interior sau lipiți?</span></li>
+    <li data-k="l3" tabindex="0"><span class="box"></span><span class="txt">Arborii: <strong>circumferința la 1 m de sol</strong>, fiecare. Peste 100 cm = intangibil (SPR). Mai ales arborele din decupajul casei (la 0,75 m de fundație) și cei trei din banda de 5 m. Specia, starea. <small>Foto cu ruleta pe trunchi.</small></span></li>
+    <li data-k="l4" tabindex="0"><span class="box"></span><span class="txt">Pintenul: unde e exact (colțul de SV, cel mai departe de alee), ce e plantat acolo, cum e marcat (țăruși, nimic)? Există borne?</span></li>
+    <li data-k="l5" tabindex="0"><span class="box"></span><span class="txt">Limita cu AK 484 (sud): ce e pe AK 484 (construcția mică din ortofoto, parcarea vilei?). Ferestre ale ei spre lot?</span></li>
+    <li data-k="l6" tabindex="0"><span class="box"></span><span class="txt">Vila: terasa la 70,30 (NV) și ferestrele vilei spre lot. Vedere directă la mai puțin de 1,90 m de noua limită? Ce vede vila peste parcare și peste fațada nord?</span></li>
+    <li data-k="l7" tabindex="0"><span class="box"></span><span class="txt">Colțul NE (parcarea): panta de aici, cât ar trebui săpat (planul: până la 65,75, zid până la 68,50). Unde ar intra mașinile din alee?</span></li>
+    <li data-k="l8" tabindex="0"><span class="box"></span><span class="txt">Apă: urme de umezeală, mușchi, șanț, guri ale rețelei pluviale a ASA, ru în apropiere. Încotro se scurge apa de pe lot?</span></li>
+    <li data-k="l9" tabindex="0"><span class="box"></span><span class="txt">Soare: fața casei dă spre est (alee); sudul e limita cu AK 484, la 4 m, fără ferestre mari. Verifică umbra pădurii și a vilei la ora vizitei.</span></li>
+    <li data-k="l10" tabindex="0"><span class="box"></span><span class="txt">Acces de șantier: pe unde intră un excavator și un camion (zidul, arborii din banda de 5 m, aleea îngustă)?</span></li>
+    <li data-k="l11" tabindex="0"><span class="box"></span><span class="txt">Ce e deja pe fâșie: umpluturi, fosă, cuvă, fundații vechi, pavaje?</span></li>
+  </ul>
+
+  <h3>3. De văzut pe loc la vânzător (fotografiază tot)</h3>
+  <ul class="check" data-group="docs">
+    <li data-k="d1" tabindex="0"><span class="box"></span><span class="txt">Esquisse-ul complet: <strong>fațadele</strong> (unde sunt ferestrele), <strong>secțiunile A–A / B–B</strong> pe terenul natural, planurile de nivel.</span></li>
+    <li data-k="d2" tabindex="0"><span class="box"></span><span class="txt">Scrisoarea sau emailul ABF și al serviciului urbanisme.</span></li>
+    <li data-k="d3" tabindex="0"><span class="box"></span><span class="txt">Autorizația de divizare (DP/PA): depusă? acordată? data, numărul.</span></li>
+    <li data-k="d4" tabindex="0"><span class="box"></span><span class="txt">Planul geometrului / procesul-verbal de bornaj.</span></li>
+    <li data-k="d5" tabindex="0"><span class="box"></span><span class="txt">Studiul de sol G1.</span></li>
+    <li data-k="d6" tabindex="0"><span class="box"></span><span class="txt">ASA: ultima cotizație, statutele, cahier des charges al lotizării.</span></li>
+  </ul>
+
+  <h3>4. De întrebat față în față</h3>
+  <p class="lede"><span class="v wa">WA</span> = deja trimis pe WhatsApp (16-oct); așteaptă răspunsul sau cere-l pe loc.</p>
+  <ul class="check" data-group="ask">
+    <li data-k="q1" tabindex="0"><span class="box"></span><span class="txt"><span class="v wa">WA</span> <strong>Ferestrele</strong>: pe ce fațade sunt în esquisse-ul validat? Sudul și vestul sunt oarbe? <small>Întrebarea care poate omorî proiectul singură.</small></span></li>
+    <li data-k="q2" tabindex="0"><span class="box"></span><span class="txt"><span class="v wa">WA</span> <strong>75 % verde</strong>: cum iese pe hârtie? Ce suprafață are exact parcarea?</span></li>
+    <li data-k="q3" tabindex="0"><span class="box"></span><span class="txt"><span class="v wa">WA</span> Dosarul proiectului + retur scris ABF / urbanisme. Cine e arhitectul? Planurile se pot refolosi?</span></li>
+    <li data-k="q4" tabindex="0"><span class="box"></span><span class="txt"><span class="v wa">WA</span> Divizarea: DP sau PA, depusă, acordată, afișată, purjată? Plan de geometru?</span></li>
+    <li data-k="q5" tabindex="0"><span class="box"></span><span class="txt"><span class="v wa">WA</span> Suprafața habitabilă pe nivel. La ce cotă e „rez-de-jardin” și pe ce grădină dă? Înălțimile sub plafon (5 m pentru două niveluri).</span></li>
+    <li data-k="q6" tabindex="0"><span class="box"></span><span class="txt"><span class="v wa">WA</span> Pintenul cu arborele: trebuie păstrat? Ceilalți arbori? Există un relevé des arbres?</span></li>
+    <li data-k="q7" tabindex="0"><span class="box"></span><span class="txt"><span class="v wa">WA</span> Studiul de sol G1 (argilă forte): există? Când?</span></li>
+    <li data-k="q8" tabindex="0"><span class="box"></span><span class="txt"><strong>AK 484</strong>: de ce nu e inclusă? Ar include-o (lot ~645 m², ferestre pe sud)? La ce preț?</span></li>
+    <li data-k="q9" tabindex="0"><span class="box"></span><span class="txt">Parcarea: cine construiește zidul de sprijin, e în preț? Tandemul a fost acceptat de urbanisme? Accesul nou din alee are acordul ASA?</span></li>
+    <li data-k="q10" tabindex="0"><span class="box"></span><span class="txt">Canalizare: unde sunt EU și EP, colectivă separativă? Rețelele din alee sunt publice sau ale ASA? Branșamentele până în lot sunt incluse?</span></li>
+    <li data-k="q11" tabindex="0"><span class="box"></span><span class="txt">ASA: cotizația pe ultimii 3 ani, lucrări votate, cota-parte din AK 196; divizarea a fost prezentată ASA-ului?</span></li>
+    <li data-k="q12" tabindex="0"><span class="box"></span><span class="txt">De ce vinde, în ce termen, preț net vânzător (320 după 350)? Acceptă promisiune cu condiții suspensive (divizare purjată, CU, permis obținut și purjat, G2, credit)?</span></li>
+  </ul>
+  <button class="reset noprint" type="button" id="reset">Șterge bifele</button>
+</section>
+
+<section id="intrebari" class="page">
+  <h2>Lista completă de întrebări (22)</h2>
+  <p class="lede">Cui i se pun și de ce; <span class="v wa">WA</span> = acoperită de mesajul trimis pe WhatsApp.</p>
+  <div class="two">
+    <div>
+      <h3>A. Divizarea și autorizațiile (vânzător + urbanisme)</h3>
+      <ol class="q">
+        <li><span class="v wa">WA</span> Asieta exactă: lotul e detașat din AK 549 de-a lungul aleii (22,19 × 17,21 + pinten) și AK 484 rămâne la vânzător? Planul geometrului, bornaj, suprafața hors voirie. De ce trece limita pe unde trece? Ar include AK 484?</li>
+        <li><span class="v wa">WA</span> Autorizația de divizare: DP sau PA, număr, dată, aviz ABF, afișaj, purjare.</li>
+        <li>Certificat d'urbanisme opérationnel pentru proiect: există?</li>
+        <li><span class="v wa">WA</span> „Concertarea” cu ABF și urbanisme: compte-rendu sau aviz scris? Dosarul complet al esquisse-ului (niveluri, fațade, coupes A–A / B–B), arhitectul, drepturile de autor pe planuri.</li>
+        <li>Vila e „Remarquable” în SPR: ABF a examinat divizarea grădinii ei? Prescripții pe abords, vederi de pe terasa de la 70,30, gard între loturi? Parcela rămasă (vilă + AK 484) rămâne conformă (20 %, 75 %, 2 parcări)?</li>
+      </ol>
+      <h3>B. Proiectul (vânzător + arhitectul lui)</h3>
+      <ol class="q" start="6">
+        <li><span class="v wa">WA</span> Secțiune și niveluri: înălțimea sub plafon a fiecărui nivel; cota „rez-de-jardin” și pe ce grădină dă; cât din RDC e sub teren pe fiecare fațadă; streașina e la 73,50 sau e brisis?</li>
+        <li><span class="v wa">WA</span> Suprafețe: surface de plancher și habitabilă pe nivel (nu Carrez, nu „utiles”); RDC-ul îngropat e locuibil reglementar?</li>
+        <li><span class="v wa">WA</span> UD7: care fațade au ferestre cu allège sub 1,90 m? Sud și vest oarbe / sticlă opacă / jours? Lucarnele?</li>
+        <li><span class="v wa">WA</span> UD13: cum iese 75 % pe hârtie? Suprafața exactă a parcării?</li>
+        <li><span class="v wa">WA</span> Arborii: cel din decupaj (specie, circumferință, stare, cine a recomandat 0,75 m de fundație); cei din banda de 5 m și pintenul; relevé / studiu fitosanitar.</li>
+        <li>Parcarea săpată: cota exactă, adâncimea, zidul (lungime, înălțime, cine, în preț?), acordul ABF pe zid, tandemul acceptat, acordul ASA pe accesul nou.</li>
+        <li>Scara și portița în zidul de incintă: acoperite de avizul ABF? Vila are ferestre la sub 1,90 m de noua limită (servituți de vedere)?</li>
+        <li>Terasamente: evacuare pământ, drenaj, unde se descarcă apele din groapă.</li>
+      </ol>
+    </div>
+    <div>
+      <h3>C. Sol și riscuri (vânzător; ERP la notar)</h3>
+      <ol class="q" start="14">
+        <li><span class="v wa">WA</span> Studiul G1 (argilă forte): îl are? când?</li>
+        <li>ERP: lotul e în „secteur B – ru de Buzot”? Istoric de umezeală / ruissellement.</li>
+        <li>Pe amprenta lotului au existat umpluturi, fosă, cuvă, o construcție veche?</li>
+      </ol>
+      <h3>D. Rețele și acces (vânzător + ASA)</h3>
+      <ol class="q" start="17">
+        <li>Unde sunt EU și EP; asainizare colectivă separativă; rețelele din alee publice sau ale ASA; branșamentele incluse sau pe banii noștri (devize); unde se descarcă pluvialul.</li>
+        <li>Aleea e cale privată a ASA? Reguli pentru acces auto nou, bateau, parcare pe alee.</li>
+      </ol>
+      <h3>E. Domeniu, ASA, juridic (vânzător + notar)</h3>
+      <ol class="q" start="19">
+        <li>ASA: statute, cahier des charges (1924–1929), regulamentul domeniului; clauze pe divizare, suprafață minimă, „o casă pe lot”, garduri; divizarea notificată ASA-ului?</li>
+        <li>Cotizația pe 3 ani, lucrări votate sau prevăzute, cota-parte din AK 196 atașată lotului.</li>
+        <li>Servituți existente sau de creat (trecere, rețele, vedere, tour d'échelle); stare ipotecară; preț net vânzător; regimul taxelor (~5,8 % + emolumente).</li>
+        <li>Calendar și motiv: de ce vinde, termen, promisiune cu condiții suspensive (DP/PA purjat, CU, PC obținut și purjat, G1/G2, credit).</li>
+      </ol>
+      <p>Dacă răspunsurile la 2, 4, 6, 8, 9 și 14 nu vin pe hârtie, lotul e o idee, nu un teren.</p>
+    </div>
+  </div>
+
+  <h3>Mesajul trimis pe WhatsApp (16-oct, de Vlad)</h3>
+<pre class="msg">Bonjour,
+
+Je suis Vlad, le mari d'Anne, qui a échangé avec vous au sujet du terrain de l'allée des Cottages. Nous habitons actuellement Maisons-Laffitte et nous aimerions nous rapprocher de l'école de notre fille. Le projet nous intéresse et on aimerait avancer avec vous.
+
+Avant de fixer une visite, quelques questions :
+
+1. Pourriez-vous nous envoyer le dossier du projet (plan de masse, plans des niveaux, façades, coupes) et le retour écrit de l'ABF et du service urbanisme ?
+2. La division du terrain est-elle déjà autorisée (déclaration préalable ou permis d'aménager) ? Y a-t-il un plan de division du géomètre ?
+3. Quelle surface habitable est prévue à chaque niveau ?
+4. Sur le plan de masse on ne voit pas les ouvertures : sur quelles façades sont prévues les fenêtres ?
+5. Comment le projet atteint-il les 75 % d'espaces verts demandés par le PLU, avec la maison et les deux places de stationnement ?
+6. Le « bec » planté au fond du lot, avec son arbre, doit-il être conservé tel quel ? Et les autres arbres du terrain ?
+7. Le secteur est classé en aléa fort retrait-gonflement des argiles : avez-vous une étude de sol ?
+
+Quand seriez-vous disponible pour une visite sur place ? Nous sommes assez souples.
+
+Merci d'avance,
+Vlad</pre>
+</section>
+
+<section id="pret" class="page">
+  <h2>Preț, comparabile, buget</h2>
+  <div class="tbl"><table>
+    <tr><th>Anunțul</th><th></th></tr>
+    <tr><td class="k">Preț</td><td>320 000 € pentru 400 m² = 800 €/m², <strong>redus de la 350 000 €</strong> (−8,6 %); leboncoin estimează 25 600 € notar → 345 600 €</td></tr>
+    <tr><td class="k">Publicat</td><td>23-09-2026, expiră 22-11-2026; o singură poză (planul), fără fotografii ale terenului</td></tr>
+    <tr><td class="k">Vânzător</td><td>particular „VivienD”, membru din 09-2013, declară Paris, un singur anunț (vila nu e la vânzare), 1 recenzie 5/5, „très réactif”</td></tr>
+  </table></div>
+  <h3>Terenuri goale vândute sau listate în domeniu</h3>
+  <div class="tbl"><table>
+    <tr><th>Adresă</th><th>Suprafață</th><th>Preț</th><th>€/m²</th><th>Când</th></tr>
+    <tr><td>21 av du Moulin</td><td class="num">483 m²</td><td class="num">390 476 €</td><td class="num">808</td><td>02-2021 (DVF)</td></tr>
+    <tr><td>7 allée de la Grotte</td><td class="num">1 351 m²</td><td class="num">750 000 €</td><td class="num">555</td><td>02-2024 (DVF)</td></tr>
+    <tr><td>Alte loturi Grandchamp (listate)</td><td class="num">~700 m²</td><td class="num">550–600 k€</td><td class="num">800–860</td><td>2026, fragmente</td></tr>
+  </table></div>
+  <h3>Case vândute în domeniu (referință de revânzare)</h3>
+  <div class="tbl"><table>
+    <tr><th>Adresă</th><th>Teren / casă</th><th>Preț</th><th>Când</th></tr>
+    <tr><td>15 allée Beausite</td><td class="num">592 / 149 m²</td><td class="num">973 k€</td><td>06-2025</td></tr>
+    <tr><td>1 allée du Perruchet</td><td class="num">400 / 82 m²</td><td class="num">702 k€</td><td>02-2025</td></tr>
+    <tr><td>40 av de Grandchamp</td><td class="num">528 / 146 m²</td><td class="num">706,6 k€</td><td>12-2023</td></tr>
+    <tr><td>9 av de Grandchamp</td><td class="num">782 / 265 m²</td><td class="num">1,38 M€</td><td>06-2023</td></tr>
+    <tr><td>5 allée du Belvédère</td><td class="num">1 012 / 460 m²</td><td class="num">1,35 M€</td><td>12-2024</td></tr>
+  </table></div>
+  <h3>Ordin de mărime all-in</h3>
+  <p>320 k€ teren + ~25 k€ notar + casă de ~150 m² habitabili pe pantă, cu zid de sprijin, nivel îngropat și arhitect (450–600 k€ după dosarul <em>le_pecq_construction</em>) → <strong>~0,8–0,95 M€</strong>, în banda de revânzare a caselor de 150–180 m² din domeniu (0,7–1,0 M€). Marjă mică: proiectul trebuie să fie bun, nu doar posibil.</p>
+</section>
+
+<section id="rezerve">
+  <h2>Ce e dedus, nu verificat</h2>
+  <ul>
+    <li>Fotografii ale terenului nu există în anunț; tot ce știm despre teren vine din plan, cadastru, altimetrie și ortofoto.</li>
+    <li>Cifrele mici de pe plan (JPEG 694 × 800): cota parcării 65,75 poate fi 66,75; lățimea casei 662⁵ poate fi 862⁵.</li>
+    <li>Potrivirea plan ↔ cadastru (lotul = fâșia de est a AK 549) e dedusă din lungimi (22,19 ≈ 22,03 m; 17,21 m pe limita de 30,86 m cu AK 484) și din poziția terasei vilei. O confirmă planul geometrului.</li>
+    <li>Comparabilele de 700 m² la 550–600 k€ vin din fragmente de căutare (agregatoarele răspund 403).</li>
+    <li>Textul exact al „Annexe I – ru de Buzot” (scanat); poziția zonei vine din harta 5.3.d.</li>
+    <li>Cotizația ASA: doar cifre din anunțuri.</li>
+  </ul>
+  <h3>Surse</h3>
+  <ul>
+    <li>Anunțul leboncoin 3236263254 (citit 16-10-2026) · PLU Le Pecq, règlement 4.2 (2024-12-18), anexe 4.5 / 4.7 / 5.1 / 5.3.d · AVAP/SPR Le Pecq 2018 (règlement écrit, plan réglementaire, inventaire architectural).</li>
+    <li>Géoportail de l'urbanisme și cadastru (apicarto IGN) · RGE ALTI · Géorisques API · DVF géo 2021–2025 (78481) · SIRENE ASA 297 800 732 · reforma PA/SPR (decret iulie 2026).</li>
+  </ul>
+</section>
+</main>
+
+<footer>Generat pe 17-10-2026 din <code>research/immo/le_pecq_grandchamp_terrain/REPORT.md</code>. Deducțiile sunt ale noastre; nimic de aici nu înlocuiește planul geometrului, avizul ABF scris sau studiul de sol.</footer>
+</div>
+
+<script>
+(function(){
+  var KEY='cottages10-checks-v1', state={};
+  try{ state=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch(e){ state={}; }
+  var items=document.querySelectorAll('.check li[data-k]');
+  function paint(li){ var on=!!state[li.getAttribute('data-k')]; li.classList.toggle('done',on); li.setAttribute('aria-checked',on?'true':'false'); }
+  function save(){ try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){} }
+  Array.prototype.forEach.call(items,function(li){
+    li.setAttribute('role','checkbox'); paint(li);
+    function toggle(){ var k=li.getAttribute('data-k'); state[k]=!state[k]; paint(li); save(); }
+    li.addEventListener('click',toggle);
+    li.addEventListener('keydown',function(ev){ if(ev.key===' '||ev.key==='Enter'){ ev.preventDefault(); toggle(); } });
+  });
+  var r=document.getElementById('reset');
+  if(r){ r.addEventListener('click',function(){ state={}; save(); Array.prototype.forEach.call(items,paint); }); }
+})();
+</script>
+
+</body>
+</html>
