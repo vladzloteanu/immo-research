@@ -57,8 +57,9 @@ reachable by anyone with the URL: `index.html`, every option's `dossier-visite.h
   mentioned as "received on <date>".
 - Every page carries `<meta name="robots" content="noindex, nofollow">` (the sync script adds it);
   that keeps search engines away, not people.
-- Pages on a **private** repo needs GitHub Pro; if the account is on Free the repo has to be
-  public, which exposes the same files plus the git history. Either way the content is the same.
+- The account is on GitHub Free, where Pages needs a **public** repo, so the repo has been public
+  since 2026-10-17 (same files as the site, plus the git history). Making it private again would
+  stop the site.
 - Private alternative, kept for later: Cloudflare Pages connected to this repo + a Cloudflare
   Access policy (Include: Emails = the owner's Gmail, One-time PIN or Google IdP) — set up from
   Vlad's Cloudflare account; Claude can click through it in his Chrome once he is logged in.
