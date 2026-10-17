@@ -26,4 +26,6 @@ PY
 fi
 # links that pointed inside the personal repo -> GitHub URLs
 [ -f "$DST/REPORT.md" ] && sed -i '' 's#\.\./\.\./\.\./skills/#https://github.com/vladzloteanu/personal_skills_and_tools/blob/main/skills/#g' "$DST/REPORT.md"
+# public site: seller's full name -> display name from the ad; strip e-mail addresses
+for f in REQUEST.md REPORT.md; do [ -f "$DST/$f" ] && sed -i '' -e 's/Vivien Dussably/Vivien D./g' -e 's/[A-Za-z0-9._%+-]*@gmail\.com/[email]/g' "$DST/$f"; done
 echo "synced $SRC -> $DST"

@@ -10,10 +10,7 @@ Opțiunile noastre de cumpărare (teren, casă, lot dintr-o divizare), fiecare �
 Fiecare folder are `README.md` (status, linkuri), `REQUEST.md`, `REPORT.md`, `dossier-visite.html`,
 `dossier-visite.pdf` și `data/`. Pagina de start a site-ului e [`index.html`](index.html).
 
-**Site privat.** Repo-ul e privat și se publică doar în spatele unui login (Cloudflare Pages +
-Cloudflare Access cu adresa `vlad.zloteanu@gmail.com`); rețeta și regula „niciodată GitHub Pages
-public” sunt în [`CLAUDE.md`](CLAUDE.md). Până atunci, PDF-urile și rapoartele se citesc direct pe
-GitHub (logat), iar fiecare dosar are și o pagină privată pe claude.ai (linkul în README-ul opțiunii).
+**Site:** <https://vladzloteanu.github.io/immo-research/> (GitHub Pages, fără login, la decizia lui Vlad din 17-10-2026 — tot ce e în `main` e public; regulile în [`CLAUDE.md`](CLAUDE.md)). Fiecare dosar are și o pagină privată pe claude.ai (linkul în README-ul opțiunii).
 
 Cum se adaugă o opțiune: cercetarea se face în repo-ul personal (`personal_skills_and_tools`,
 `research/immo/<topic>/`), apoi `scripts/sync_option.sh <dir> <slug>` aduce fișierele aici.

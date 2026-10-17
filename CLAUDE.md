@@ -41,36 +41,27 @@ e.g. `le-pecq-grandchamp-cottages-10`. Keep the status in each option's README h
 Everything is static: no build step, no framework, no CDN dependency except Google Fonts (the
 pages fall back to system fonts offline). Each dossier is self-contained with its `data/` folder.
 
-## Publishing and protection — read before touching Pages
+## Publishing — the site is public, by decision
 
-The dossiers contain addresses, parcel numbers, sellers' display names, prices, DVF purchase
-prices of identifiable people and family details (our daughter's school, where we live). They must
-**never be reachable without login**.
+**Decision (Vlad, 2026-10-17): GitHub Pages without login.** Source: branch `main`, root folder →
+`https://vladzloteanu.github.io/immo-research/`. Everything committed to `main` is therefore
+reachable by anyone with the URL: `index.html`, every option's `dossier-visite.html`/`.pdf`,
+`REPORT.md`, `REQUEST.md` and `data/`. Rules that follow from it:
 
-- **Do not enable GitHub Pages on this repo.** GitHub Pages serves a private repo's site publicly
-  on every plan below Enterprise Cloud; there is no login wall. The repo itself stays **private**
-  and is readable only when logged into GitHub (that is already a protected way to read the PDFs
-  and Markdown on a phone: GitHub renders both).
-- **Publish through Cloudflare Pages behind Cloudflare Access** (both free for one user):
-  1. Cloudflare dashboard → Workers & Pages → Create → Pages → *Connect to Git* →
-     `vladzloteanu/immo-research`, branch `main`, no build command, output directory `/`.
-     The site appears at `https://immo-research.pages.dev`.
-  2. Zero Trust → Access → Applications → *Add an application* → *Self-hosted* →
-     domain `immo-research.pages.dev` and `*.immo-research.pages.dev` → session 24 h →
-     policy **Allow**, *Include: Emails* = `vlad.zloteanu@gmail.com` (add Anne's address if wanted).
-     Login method **One-time PIN** works with zero setup (a code is mailed to that Gmail).
-  3. For a real *Sign in with Google* button: Zero Trust → Settings → Authentication → *Login
-     methods* → Google; it needs an OAuth client from console.cloud.google.com with the redirect
-     URL `https://<team>.cloudflareaccess.com/cdn-cgi/access/callback`. Then restrict the policy to
-     that identity provider.
-  4. In the Pages project → Settings → *Access policy* → enable, so preview deployments are
-     protected too.
-  Only the account owner can do steps 1–3 (they are account settings); Claude writes and syncs the
-  content, never flips a site to public.
-- Alternative only if the GitHub account is on Pro: GitHub Pages **with a custom domain proxied by
-  Cloudflare and the same Access policy**. Never bare GitHub Pages.
-- The private claude.ai artifacts (one per dossier, linked from each option README) are already
-  private to Vlad's Claude account and are the quickest phone view until Cloudflare is set up.
+- Only facts that are already public (ads, PLU, SPR, cadastre, DVF, Géorisques) or our own go in.
+  Sellers appear under the display name they use in the ad; the sync script rewrites the full
+  name of the Grandchamp seller to that display name and strips e-mail addresses — extend those
+  `sed` rules when a new option brings new names.
+- Never commit: phone numbers, e-mails, WhatsApp exports, documents a seller sent privately
+  (plans, ABF letters, soil studies). Those stay in the personal repo; here they are only
+  mentioned as "received on <date>".
+- Every page carries `<meta name="robots" content="noindex, nofollow">` (the sync script adds it);
+  that keeps search engines away, not people.
+- Pages on a **private** repo needs GitHub Pro; if the account is on Free the repo has to be
+  public, which exposes the same files plus the git history. Either way the content is the same.
+- Private alternative, kept for later: Cloudflare Pages connected to this repo + a Cloudflare
+  Access policy (Include: Emails = the owner's Gmail, One-time PIN or Google IdP) — set up from
+  Vlad's Cloudflare account; Claude can click through it in his Chrome once he is logged in.
 
 ## Security rules
 
