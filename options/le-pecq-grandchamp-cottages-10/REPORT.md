@@ -6,6 +6,8 @@
 
 Răspunsul are trei părți: ce am verificat singuri pe sursele publice (§1), ce arată planul de masă din anunț pus față în față cu PLU-ul (§1.7) și lista de întrebări care rămân doar la vânzător / primărie / notar (§2), cu mesajul în franceză gata de trimis (§3).
 
+**Livrabile pentru vizita din 17-oct-2026:** [`dossier-visite.html`](dossier-visite.html) (pagina de telefon + tipar: rezumat, planul decodat, secțiuni deduse din cote, cadastru cu lotul dedus în [`data/cadastre-lot-dedus.svg`](data/cadastre-lot-dedus.svg), PLU față în față cu planul, checklist de vizită cu bife, cele 22 de întrebări, preț) · [`dossier-visite.pdf`](dossier-visite.pdf) (13 p. A4, WeasyPrint) · pagina privată pe claude.ai: <https://claude.ai/artifact/Uk4NsY9Yc14MKRqop27S8b> · copie în repo-ul privat [https://github.com/vladzloteanu/immo-research](https://github.com/vladzloteanu/immo-research) (`options/le-pecq-grandchamp-cottages-10/`, sincronizat cu `scripts/sync_option.sh`).
+
 ---
 
 ## 1. Ce știm deja despre parcelă (verificat, nu pe cuvântul vânzătorului)
