@@ -29,14 +29,19 @@ e.g. `le-pecq-grandchamp-cottages-10`. Keep the status in each option's README h
 ## Adding or refreshing an option
 
 1. Do the research in the personal repo (`research/immo/<topic>/`), keep its skill live
-   (`skills/immo/<area>/SKILL.md`), build `dossier-visite.html` + `dossier-visite.pdf` there.
-   The HTML there is a bare artifact body (no `<html>`/`<head>`); the images it uses live under
-   `data/` with **relative paths**, so it works unchanged here.
-2. `scripts/sync_option.sh <source research dir> <slug>` — wraps the HTML into a full document,
-   adds `noindex`, copies PDF, REPORT, REQUEST and `data/`, rewrites links that pointed inside the
-   personal repo to GitHub URLs.
-3. Write or update `options/<slug>/README.md` and add/refresh the card in `index.html`.
-4. Commit and push to `main` (standing authorization; no force push).
+   (`skills/immo/<area>/SKILL.md`), build `dossier-visite.html` + `dossier-visite.pdf` there
+   (`research/<topic>/build/build_dossier.py`, WeasyPrint). The HTML there is a bare artifact body
+   (no `<html>`/`<head>`); its images live under `data/` with **relative paths**, so it works here.
+2. Create `options/<slug>/.source` holding the absolute path of that research dir, plus the
+   option's `README.md`, and add its card to `index.html`.
+3. **Syncing is automatic.** The personal repo has a Claude Code `Stop` hook
+   (`.claude/settings.json` → `bin/sync-immo-research`) that runs `scripts/sync_all.sh` here at the
+   end of every turn: for each `options/*/.source` it runs `scripts/sync_option.sh` (rsync of
+   `data/`, copy of REQUEST/REPORT/PDF, wrap of the HTML, `noindex`, redactions, private blocks
+   stripped), then commits and pushes if anything changed. Log: `.sync.log` (gitignored).
+   Manual run: `scripts/sync_all.sh`, or `scripts/sync_option.sh <dir> <slug>` for one option.
+4. GitHub Pages rebuilds from `main` in about a minute; check with
+   `gh api repos/vladzloteanu/immo-research/pages/builds/latest`.
 
 Everything is static: no build step, no framework, no CDN dependency except Google Fonts (the
 pages fall back to system fonts offline). Each dossier is self-contained with its `data/` folder.
