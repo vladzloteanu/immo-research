@@ -23,6 +23,8 @@
 <text class="lbl" x="41.24" y="77.14" text-anchor="middle">AK 561</text>
 <text class="lbl" x="57.86" y="-28.53" text-anchor="middle">AK 162</text>
 <path d="M61.34,43.18 L44.21,41.95 L36.66,35.56 L36.45,35.07 L51.55,20.82 L52.52,20.87 L62.86,21.59 Z" fill="var(--map-lot)" stroke="var(--bad)" stroke-width="0.45" stroke-dasharray="1.2 0.7"/>
+<path d="M62.06,32.93 L61.34,43.18 L44.46,41.05 L35.13,32.83 L31.38,29.56 L49.19,31.41 Z" fill="none" stroke="var(--map-line)" stroke-width="0.2" stroke-dasharray="0.5 0.4"/>
+<text class="sm" x="46.26" y="39.66" text-anchor="middle">AK 484 · 241 m² · în lot</text>
 <path d="M56.35,42.83 L57.87,21.24" stroke="var(--bad)" stroke-width="0.15" stroke-dasharray="0.6 0.5" fill="none"/>
 <path d="M61.62,39.19 L34.69,37.30" stroke="var(--bad)" stroke-width="0.15" stroke-dasharray="0.6 0.5" fill="none"/>
 <path d="M56.63,38.84 L45.77,38.08 L46.24,31.46 L57.10,32.22 Z" fill="var(--card)" stroke="var(--ink)" stroke-width="0.3"/>
