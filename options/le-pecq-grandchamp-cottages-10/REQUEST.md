@@ -35,3 +35,8 @@ Vlad: „activează GitHub Pages fără login” → repo-ul `immo-research` fă
 
 Vlad a lipit răspunsul vânzătorului la cele 7 întrebări. Analizat punct cu punct în REPORT.md §1.8 și în dosarul de vizită (secțiunea „Răspunsul vânzătorului”). Pe scurt: PA de obținut (nedepus), întâlniri cu urbanismul și ABF fără aviz scris, geometru = relevé DWG (nu divizare), 3 × 62 m² bruți cu RDC îngropat 50–75 % și „habitabilitate de determinat”, ferestre principale pe E/N/V, citește UD13 ca 80 % × 75 %, pintenul = ca să nu taie un arbore haute tige, fără studiu de sol.
 
+
+## Follow-up 2026-10-20 (dosarul PA trimis de vânzător prin email)
+
+Vlad a dat trei fișiere din Mail („voilà des nouveaux infos envoyés par le proprio — rajoute-les”; apoi „tu peux les mettre ds git”): planșele PA inițiale (23-07-2025), piesele complementare (01-10-2025) și notice-ul PA2 (Word), toate de la ARCHIDUO (arhitecți, Mareil-Marly), plus textul emailului (arhitecți din zonă, case recente din domeniu). Fișierele au trecut prin `bin/quarantine` (nicio instrucțiune ascunsă) și sunt în [`vendeur/`](vendeur/), în repo-ul personal, niciodată pe site. Analizate în REPORT.md §1.9 și în dosar (secțiunea „Dosar PA”); harta cadastrală a fost redesenată după PA4 (lotul = AK 484 + colțul de SE al AK 549, 417 m²); întrebările 1, 2, 6, 9, 17, 19 actualizate.
+

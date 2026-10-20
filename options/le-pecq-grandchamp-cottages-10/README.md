@@ -1,29 +1,30 @@
 # Allée des Cottages 10 — Domaine de Grandchamp, Le Pecq (78230)
 
-**Status: EXPLORING** · anunț găsit de Anne (WhatsApp, 16-oct-2026) · întrebări trimise vânzătorului pe WhatsApp (16-oct) · **vizită 17-oct-2026**
+**Status: EXPLORING** · anunț găsit de Anne (WhatsApp, 16-oct-2026) · întrebări trimise vânzătorului pe WhatsApp (16-oct) · **vizită 17-oct-2026** · dosarul de permis d'aménager primit de la vânzător pe 20-oct
 
 | | |
 |---|---|
-| Ce e | lot de ~400 m² („terrain à bâtir”) detașat din grădina vilei „Remarquable” de la nr. 10 (parcela AK 549), fâșia de 22,19 m front de-a lungul aleii; nu există încă în cadastru |
-| Anunț | leboncoin 3236263254, vânzător particular „VivienD”; **320 000 €** (800 €/m²), redus de la 350 000 €; publicat 23-09-2026; singura poză = planul de masă |
-| Proiectul vânzătorului | casă 72 m² la sol, RDC 68,50 + etaj + mansardă, streașină 73,50 / coamă 76,40, 2 parcări în tandem săpate, scară + portiță nouă în zidul de incintă; „architecture et emplacement définis avec l'ABF et l'urbanisme” (nescris) |
+| Ce e | lot de **417 m²** („terrain à bâtir”, măsurat de geometru, nebornat) = parcela AK 484 + colțul de sud-est al AK 549, grădina vilei „Remarquable” de la nr. 10; 22,19 m front pe alee, 17,21 m pe limita cu vecinul de sud; nu există încă în cadastru. Un permis d'aménager a fost depus în 2025, soarta lui e necunoscută |
+| Anunț | leboncoin 3236263254, vânzător particular „VivienD”; **320 000 €** (767 €/m² pe 417 m²), redus de la 350 000 €; publicat 23-09-2026; singura poză = planul de masă |
+| Proiectul vânzătorului | casă 72 m² la sol, RDC 68,50 + etaj + mansardă, streașină 73,50 / coamă 76,40 (78,40 în PA-ul din 2025), 2 parcări în tandem săpate, scară + portiță nouă în zidul de incintă; „architecture et emplacement définis avec l'ABF et l'urbanisme” (nescris) |
 | Reguli | PLU UDb (20 % emprise, 7/10 m de la TN, 5 m de alee, 8 m cu ferestre / 4 m fără, 75 % verde) · SPR AP2d (aviz conform ABF; arbori > 100 cm intangibili) · argilă forte (G1 datorat de vânzător) · ASA Grandchamp (1929) |
 
 ## Fișiere
 
 - [`dossier-visite.html`](dossier-visite.html) — pagina de telefon + tipar: rezumat, planul decodat, secțiuni deduse, cadastru, PLU față în față cu planul, checklist de vizită cu bife, cele 22 de întrebări, preț
-- [`dossier-visite.pdf`](dossier-visite.pdf) — aceeași pagină, 13 pagini A4, de imprimat înainte de vizită
+- [`dossier-visite.pdf`](dossier-visite.pdf) — aceeași pagină, 14 pagini A4, de imprimat înainte de vizită
 - [`REPORT.md`](REPORT.md) — raportul complet (surse, deducții, mesajele FR) · [`REQUEST.md`](REQUEST.md) — cererea și follow-up-urile
-- [`data/`](data/) — planul din anunț + zoom-uri, ortofoto + cadastru, inelele parcelelor (JSON), harta SVG cu lotul dedus, extrasele PLU/SPR
+- [`data/`](data/) — planul din anunț + zoom-uri, ortofoto + cadastru, inelele parcelelor (JSON), harta SVG cu lotul după planul geometrului, extrasele PLU/SPR
 - Pagina privată pe claude.ai (același conținut, bifele se păstrează pe telefon; depinde de contul Claude cu care e deschisă, link-ul stabil e [dossier-visite.html](dossier-visite.html)): <https://claude.ai/artifact/UCF9mT6FHkiPkCHougzsLj>
 
 ## Ce trebuie reținut
 
 1. **Ferestrele (UD7)**: casa e la 4 m de limita de sud și 4–6 m de limita nouă; ferestre normale doar spre alee (est) și pe ~6 m din fațada nord. Întrebarea care poate omorî proiectul singură.
-2. **75 % verde (UD13)**: pe plan ≈ 71–72 %. Nu iese fără parcare mai mică sau lot mai mare.
+2. **75 % verde (UD13)**: caseta arhitectului de pe PA4 ajunge la 75 % doar numărând 44 m² de parcare permeabilă (280 m² pământ plin = 67 %); UD13 numără doar aleile pietonale → acord scris de la urbanisme sau parcare mai mică.
 3. **Parcarea săpată** 1,75–2,75 m cu ~25 m de zid de sprijin în argilă forte, lângă grădina vilei.
 4. **Nimic nu se semnează fără**: autorizația de divizare (DP/PA) purjată, avizul ABF scris, planul geometrului, G1.
-5. **Levier**: AK 484 (241 m²) rămâne la vânzător lipită de sud; cu ea lotul ar avea ~645 m² și ferestre pe sud.
+5. **PA-ul din 2025**: depus, completat în oct-2025, apoi nimic cunoscut; „à obtenir” pe 16-oct-2026. Prima întrebare: ce decizie a primit și ce a spus ABF. Din 1-sep-2026 divizarea fără echipamente comune e o déclaration préalable.
+6. **Bornaj**: limitele sunt „non bornées”; la vânzarea unui lot de lotissement pentru construit bornajul e obligatoriu (L.115-4) → pe banii vânzătorului.
 
 ## Origine
 
