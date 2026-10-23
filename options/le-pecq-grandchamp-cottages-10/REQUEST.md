@@ -46,3 +46,5 @@ Vlad a dat trei fișiere din Mail („voilà des nouveaux infos envoyés par le 
 > ok. vreau sa te uiti un pic la firmele de arhitecti - sa imi faci un top 5; vreau sa imi spui si cam cat ar costa sa facem un studiu / sa vedem ce e posibil acolo
 
 Cercetare în 4 unghiuri (firmele numite de vânzător + ARCHIDUO; cine a proiectat casele noi din Grandchamp și ce impune caietul de sarcini al domeniului; alți arhitecți locali cu case noi în situri protejate; costul unui studiu, de la consultațiile gratuite CAUE 78 / ABF / urbanism / CUb până la studiul de fezabilitate și misiunea de permis). Note brute în `arhitecti/angles/`, raportul în `arhitecti/REPORT.md`, rezumat în REPORT.md §1.10. Sesiunea `2725050e-0bdf-4892-b9fb-7902b01403c2`.
+
+Artifact-ul dosarului (https://claude.ai/artifact/UCF9mT6FHkiPkCHougzsLj) nu mai există pentru contul Claude din 23-oct; dosarul e republicat la https://claude.ai/artifact/1Y4PCXAkyCBKfeuHqVCros (link-ul stabil rămâne copia GitHub Pages).
