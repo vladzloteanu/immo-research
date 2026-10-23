@@ -15,7 +15,7 @@
 - [`dossier-visite.pdf`](dossier-visite.pdf) — aceeași pagină, 19 pagini A4, de imprimat înainte de vizită
 - [`REPORT.md`](REPORT.md) — raportul complet (surse, deducții, mesajele FR) · [`REQUEST.md`](REQUEST.md) — cererea și follow-up-urile
 - [`data/`](data/) — planul din anunț + zoom-uri, ortofoto + cadastru, inelele parcelelor (JSON), harta SVG cu lotul după planul geometrului, extrasele PLU/SPR
-- Pagina privată pe claude.ai (același conținut, bifele se păstrează pe telefon; depinde de contul Claude cu care e deschisă, link-ul stabil e [dossier-visite.html](dossier-visite.html)): <https://claude.ai/artifact/1Y4PCXAkyCBKfeuHqVCros>
+- Pagina privată pe claude.ai (același conținut, bifele se păstrează pe telefon; depinde de contul Claude cu care e deschisă, link-ul stabil e [dossier-visite.html](dossier-visite.html)): <https://claude.ai/artifact/Uk4NsY9Yc14MKRqop27S8b>
 
 ## Ce trebuie reținut
 
