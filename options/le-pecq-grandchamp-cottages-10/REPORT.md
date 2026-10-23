@@ -1,6 +1,6 @@
 # Terrain à bâtir, 10 allée des Cottages — Domaine de Grandchamp, Le Pecq (78230)
 
-**Data:** 2026-10-16, actualizat 2026-10-20 (dosarul PA, §1.9) · **Sesiune:** `72AE4B80-2B3F-4CB8-98C6-E80C061A633A` · **Anunț:** leboncoin 3236263254, vânzător particular (contact în WhatsApp-ul Anei), **citit în Chrome pe 16-oct** — singura poză e planul de masă ([`data/annonce/`](data/annonce/)) · **Hub Le Pecq:** [`skills/immo/le-pecq-land`](https://github.com/vladzloteanu/personal_skills_and_tools/blob/main/skills/immo/le-pecq-land/SKILL.md)
+**Data:** 2026-10-16, actualizat 2026-10-20 (dosarul PA, §1.9) și 2026-10-23 (arhitecți și costul unui studiu, §1.10) · **Sesiune:** `72AE4B80-2B3F-4CB8-98C6-E80C061A633A` · **Anunț:** leboncoin 3236263254, vânzător particular (contact în WhatsApp-ul Anei), **citit în Chrome pe 16-oct** — singura poză e planul de masă ([`data/annonce/`](data/annonce/)) · **Hub Le Pecq:** [`skills/immo/le-pecq-land`](https://github.com/vladzloteanu/personal_skills_and_tools/blob/main/skills/immo/le-pecq-land/SKILL.md)
 
 Întrebare: *ce întrebăm vânzătorul despre lotul de ~400 m², „zone UDb, 180 m² utiles sur 3 niveaux (RDC semi-enterré + rez-de-jardin + combles mansardées), 2 stationnements, libre de constructeur, architecture et emplacement définis avec l'ABF et l'urbanisme”?*
 
@@ -69,6 +69,7 @@ Alte consecințe automate: 72 m² amprentă × (RDC + etaj + mansardă) ≈ 180�
 - **Autorizația de divizare:** detașarea unui lot de construit în SPR cerea *permis d'aménager* (R.421-19 b); decretul din iulie 2026, în vigoare de la **1-sep-2026**, a scos criteriul de localizare → acum o *déclaration préalable* de divizare (PA doar dacă se creează echipamente comune), **cu avizul ABF**. Vânzarea / promisiunea unui lot se leagă de autorizația obținută și purjată.
 - PA3 (état actuel) nu desenează nicio construcție pe terenul B → **nimic de demolat pe lot**; ce vedeam pe ortofoto lângă colțul de sud e casa vecinului de pe AK 530 („0 étage + combles”), la 4 m de viitoarea casă.
 - **Parcela rămasă a vânzătorului** (lot A ≈ 1 257 m² din AK 549, cu accesul existent de 8,64 m) trebuie să rămână conformă după divizare (20 % emprise, 75 % verde, **2 parcări pentru vilă** — pe accesul existent); divizarea unei grădini de vilă „Remarquable” e exact ce examinează ABF.
+- **ASA și divizările (23-oct):** ASA nu aprobă permise, dar fiecare șantier semnează procedura ei de circulație (camioane ≤ 16 t, cu derogare de la primărie). În 2017 a cerut primăriei reguli „contre le morcellement parcellaire”; primarul a răspuns că legea ALUR nu le mai permite în PLU (raportul anchetei AVAP, pp. 32–37). Din 2019 domeniul a avut 7 permis d'aménager autorizate, 4 în 2024–2026 → loturi concurente (§1.10).
 
 ### 1.6 Preț și piață (anunț citit 16-oct; DVF 2021–2025, comuna 78481)
 
@@ -139,6 +140,53 @@ Emailul de însoțire (verbatim în `REQUEST.md`, bloc privat) mai aduce: notice
 Ce schimbă față de 17-oct: (1) **lotul e cerut, nu obținut**: PA-ul există din 2025, iar soarta lui decide totul — un refuz motivat ar spune exact ce nu merge; (2) calea de azi e **DP**, nu PA; (3) **bornaj** obligatoriu, nu există; (4) 75 % stă sau cade pe **44 m² de parcare înierbată**; (5) harta și geometria din §1.1/§1.7 sunt corectate (AK 484 în lot, vecin AK 530), „levierul AK 484” dispare; (6) canalizarea există; (7) regulile domeniului trebuie citite.
 
 ---
+
+### 1.10 Arhitecți și costul unui studiu (23-oct-2026)
+
+Raportul complet, cu contactele firmelor, e în `arhitecti/REPORT.md` (repo personal; notele brute în `arhitecti/angles/`). Ce reținem:
+
+**Nicio sursă publică nu numește arhitectul vreunei case noi aprobate de ABF în Grandchamp.** Registrul național Sitadel n-are câmp pentru arhitect, iar ordinele de circulație ale primăriei numesc doar antreprenorii. Numele stau în cele cinci dosare de permis de case noi date după intrarea în vigoare a AVAP (29-06-2018): toate peste 150 m², deci cu arhitect obligatoriu și cu avizul ABF. Un permis acordat se poate consulta gratuit, la cerere scrisă cu numărul lui (răspuns în ≤ 1 lună; refuzul se contestă la CADA).
+
+| Adresa (registru) | Permis (Sitadel) | Autorizat | Casa / parcela |
+|---|---|---|---|
+| 13 allée du Tapis Vert | 0784811801009 | 18-12-2018 | 216 m² / 1 227 m² |
+| 17 avenue du Château | 0784811801018 | 11-02-2019 | 178 m² / nedeclarată |
+| 21 allée du Moulin, casa 1 | 0784812000002 | 08-10-2020 | 223 m² / 483 m² |
+| 21 allée du Moulin, casa 2 | 0784812100007 | 15-07-2021 | 177 m² / 482 m² |
+| 7 allée de la Grotte | 0784812300009 | 06-11-2023 | 300 m² / 1 351 m² |
+
+„15 avenue du Moulin (2 maisons)” din emailul vânzătorului sunt cele două case de la nr. 21 (la nr. 15 nu există niciun permis de locuință din 2013), iar „11-13 allée du Tapis Vert” e permisul unic de la nr. 13. 4 allée de la Grotte (autorizată pe 25-06-2018, cu patru zile înainte de AVAP) nu e un precedent ABF.
+
+**Precedentul cel mai apropiat de lotul B** e 21 allée du Moulin: o parcelă de 966 m², cu casa veche demolată, împărțită în 2019 în două loturi de ~480 m² (primul vândut ca teren pe 01-02-2021 la 808 €/m²), cu câte o casă nouă aprobată sub AVAP. Ordinele primăriei din 2023–2024 o leagă de constructorul **Maisons Lelièvre** (cel puțin una dintre case) → o rută alternativă: constructor + arhitect pentru permis, cu preț ferm.
+
+**Top 5, ca ordine de apel** (nu verdict; un nume care apare în două-trei dosare de permis urcă primul):
+
+| # | Firma | De ce | Riscul |
+|---|---|---|---|
+| 1 | **DSA – Dura Saulnier Associés**, Le Vésinet ([site](https://dsa-architectes.fr/)) | singura casă nouă documentată într-un SPR din zonă (Le Vésinet); recenzii care laudă relația cu ABF (5,0 din 24); singurele prețuri publice: **vizită „avant achat” 180 € TTC**, permis 5–6 k€ HT, misiune completă 10–12 % | doi asociați de ~67 și ~72 de ani, fără angajați |
+| 2 | **Tripode / ALPH**, Saint-Germain-en-Laye ([site](https://www.tripode.archi/)) | ~15 oameni, director de șantier; 4 vile pe pantă abruptă cu meulière (Jouy-en-Josas, în curs); renovări în sectoarele protejate din Saint-Germain | nicio casă nouă livrată; tarife nepublicate; o recenzie de 1/5 |
+| 3 | **Frank Salama**, Paris | casă nouă pe 348 m² obținuți prin divizare, la Maisons-Laffitte, sub un PLU strict, cu sticlă translucidă unde ferestrele erau interzise (exact problema UD7) | stil „japonisant”; precedentul e din 2006 |
+| 4 | **Atelier FC – Fabrice Commerçon** ([site](https://www.atelier-fc.com/)) | arhitect și inginer (zid de sprijin, argilă); casă nouă la Croissy (2022) cu dormitoare la un nivel îngropat; face studii de fezabilitate | niciun proiect ABF/SPR arătat |
+| 5 | **ARCHIDUO**, Mareil-Marly | a desenat PA-ul acestui lot și știe ce au cerut urbanismul și ABF; case pe pantă livrate; două lucrări în Le Pecq | lucrează pentru vânzător; planurile sunt opera lui (reutilizare doar cu acord scris) → abia după semnare |
+
+Rezerve: Charlotte de Boisé (Le Vésinet), Frédéric Coupey (Vaucresson; casă nouă pe pantă la Bougival), Hervé Lebette (Maisons-Laffitte).
+
+**Costul unui studiu.** Nu există barem oficial; DSA e singura firmă locală cu prețuri publice, restul vin din ghiduri naționale din 2026 (2–3 oferte scrise le înlocuiesc):
+
+| Treaptă | Cost | Când |
+|---|---|---|
+| Dosarele celor 5 permise de mai sus, urbanismul din Le Pecq, consultation préalable la ABF (UDAP 78, răspuns cerut pe email), CAUE 78 | 0 € | acum |
+| Certificat d'urbanisme opérationnel (îngheață regulile 18 luni; nu leagă ABF) | 0 €, 2 luni | cu o schiță |
+| Vizită pe teren DSA, aviz oral | 180 € TTC | acum |
+| Studiu de fezabilitate / esquisse: 1–3 variante, secțiuni pe teren natural (7 m / 10 m), ferestre UD7, 75 % fără parcare, suprafețe | ~1 800–6 000 € TTC | după ce divizarea e lămurită |
+| Misiunea de permis (testul real la ABF) + studii G2, RE2020 | ~6–18 k€ TTC + 2–10 k€ | în promesse, cu condiții suspensive |
+| Misiune completă (concepție + șantier) | 8–12 % din lucrări ≈ 24–47 k€ HT | după cumpărare |
+
+G1 și bornajul sunt ale vânzătorului. Total ca să vezi ce se poate construi înainte de a semna: **~2–7 k€ TTC**, sub 1 % din costul total (§1.6).
+
+**De ce studiul plătit așteaptă divizarea.** Sitadel (ediția 29-09-2026) arată în domeniu 7 permis d'aménager autorizate din 2019 (4 în 2024–2026, ultimul la 10 allée de la Grotte pe 06-08-2026) și **niciunul pentru 10 allée des Cottages**; registrul poate întârzia câteva luni și nu listează refuzurile. Cât timp divizarea e PA, **art. L.442-4 C. urb.** („aucune promesse de vente… ne peut être consentie et aucun acompte ne peut être accepté avant la délivrance du permis d'aménager”, citit pe Légifrance pe 23-10-2026) exclude orice promesse și orice indemnitate de imobilizare: un studiu plătit acum îl informează și pe vânzător, fără să vă protejeze. Sub DP (regimul din 1-sep-2026) o promesse cu condiție suspensivă pare posibilă; de confirmat la notar sau la ADIL 78. Ordinea: acum 0 € + 180 €; studiul, după ce divizarea are o cale cunoscută; misiunea de permis, în promesse.
+
+**Cahier des charges.** Un caiet de sarcini de lotizare obligă contractual coloții oricât de vechi ar fi (Cass. civ. 3, 21-01-2016, n° 15-10.566: demolare confirmată pentru o extindere care încălca unul din 1926). Cel al domeniului nu e anexat la PLU și nu e online → din titlul vânzătorului (cumpărarea din 2021), de la ASA sau de la Arhivele Yvelines; se dă arhitectului odată cu DWG-ul.
 
 ## 2. Ce întrebăm (cui, de ce)
 
@@ -227,7 +275,8 @@ Vlad: „fă-l mai simplu, nu întreba chestii f tehnice pe care putem să le ve
 - **Fotografii ale terenului**: anunțul nu are niciuna — singura imagine e planul de masă (citit 16-oct prin Chrome-ul lui Vlad). „Image #2” din WhatsApp e, cel mai probabil, același plan.
 - **Cifrele mici de pe plan** (JPEG 694 × 800): cota parcării se citește **65,75** (poate 66,75); lățimea casei „862⁵” poate fi „662⁵” (măsurat pe pixeli: ~6,6 m în spate, ~8,0 m în față). Ordinea de mărime a concluziilor nu depinde de ele.
 - **Conturul lotului** e digitizat de pe planșa PA4 (1/100) și așezat pe inelele cadastrale apicarto (±1 m); 417 m² e cifra geometrului de pe un plan „provisoire”, cu limite nebornate.
-- **Soarta PA-ului din 2025**: documentele primite sunt cererea și completările, nu decizia; nimic nu spune dacă a fost acordat, refuzat sau retras.
+- **Soarta PA-ului din 2025**: documentele primite sunt cererea și completările, nu decizia. Registrul național Sitadel (ediția 29-09-2026) nu arată nicio autorizare pentru 10 allée des Cottages, dar poate întârzia și nu listează refuzurile (§1.10).
+- **Arhitecții caselor noi din domeniu**: nicio sursă publică nu-i numește; clasamentul din §1.10 e o ordine de apel până la consultarea dosarelor de permis. Prețurile, în afară de DSA, vin din ghiduri naționale.
 - **Agregatoarele** (zimo, explorimmoneuf, PAP) răspund 403 → comparabilele de 700 m² la 550–600 k€ sunt din fragmente de căutare.
 - Textul exact al „Annexe I – ru de Buzot” (anexa 5.1 e scanată, fără text); poziția zonei vine din citirea hărții 5.3.d.
 - Cotizația ASA (doar cifre din anunțuri).
@@ -242,3 +291,4 @@ Vlad: „fă-l mai simplu, nu întreba chestii f tehnice pe care putem să le ve
 - Inventaire Île-de-France „château de Grandchamp puis maison d'enfants de Saint-Cyr” (lotizare 1924); SIRENE ASA 297 800 732; marchés publics ASA (voirie, réseau pluvial + ru)
 - Reforma permis d'aménager / SPR: Kohen Avocats (2026-08-02), QE AN n° 17724
 - Dosarul PA (ARCHIDUO, Mareil-Marly): „PERMIS AM INITIAL” (7 planșe A3, 23-07-2025), „PIECES COMP PA 01-10-25” (7 planșe, PDF 29-10-2025), „PA 2bis NOTICE PRESENTATION – PIECE COMP” (Word, 2 p.) — trimise de vânzător prin email pe 20-10-2026; copii în `vendeur/` (repo personal, nesincronizat pe site)
+- Arhitecți și costuri (23-10-2026): Sitadel (permise de locuințe, PA și demolări, Le Pecq, ediția 29-09-2026), ordinele de circulație ale primăriei (2023–2024, web.archive.org), site-urile și portofoliile firmelor (dsa-architectes.fr, tripode.archi, archiduodcbat.com, atelier-fc.com), annuaire-ul Ordinului și architectes-pour-tous.fr, CAUE 78 (caietele n° 2 și 3; conseil aux particuliers), UDAP 78, service-public F1633, Légifrance L.442-4, Cass. civ. 3, 21-01-2016, n° 15-10.566; detaliat în `arhitecti/REPORT.md`
