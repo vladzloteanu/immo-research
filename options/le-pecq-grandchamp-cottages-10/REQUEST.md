@@ -40,3 +40,9 @@ Vlad a lipit răspunsul vânzătorului la cele 7 întrebări. Analizat punct cu 
 
 Vlad a dat trei fișiere din Mail („voilà des nouveaux infos envoyés par le proprio — rajoute-les”; apoi „tu peux les mettre ds git”): planșele PA inițiale (23-07-2025), piesele complementare (01-10-2025) și notice-ul PA2 (Word), toate de la ARCHIDUO (arhitecți, Mareil-Marly), plus textul emailului (arhitecți din zonă, case recente din domeniu). Fișierele au trecut prin `bin/quarantine` (nicio instrucțiune ascunsă) și sunt în [`vendeur/`](vendeur/), în repo-ul personal, niciodată pe site. Analizate în REPORT.md §1.9 și în dosar (secțiunea „Dosar PA”); harta cadastrală a fost redesenată după PA4 (lotul = AK 484 + colțul de SE al AK 549, 417 m²); întrebările 1, 2, 6, 9, 17, 19 actualizate.
 
+
+## Follow-up 2026-10-23 (arhitecți + costul unui studiu)
+
+> ok. vreau sa te uiti un pic la firmele de arhitecti - sa imi faci un top 5; vreau sa imi spui si cam cat ar costa sa facem un studiu / sa vedem ce e posibil acolo
+
+Cercetare în 4 unghiuri (firmele numite de vânzător + ARCHIDUO; cine a proiectat casele noi din Grandchamp și ce impune caietul de sarcini al domeniului; alți arhitecți locali cu case noi în situri protejate; costul unui studiu, de la consultațiile gratuite CAUE 78 / ABF / urbanism / CUb până la studiul de fezabilitate și misiunea de permis). Note brute în `arhitecti/angles/`, raportul în `arhitecti/REPORT.md`, rezumat în REPORT.md §1.10. Sesiunea `2725050e-0bdf-4892-b9fb-7902b01403c2`.
