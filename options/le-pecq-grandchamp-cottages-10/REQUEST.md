@@ -52,3 +52,12 @@ Artifact-ul dosarului (https://claude.ai/artifact/UCF9mT6FHkiPkCHougzsLj) nu mai
 Tot pe 23-oct, după răspunsul despre arhitecți, sesiunea a trecut pe alt cont Claude, pe care https://claude.ai/artifact/1Y4PCXAkyCBKfeuHqVCros nu se mai deschide. Pe acest cont exista încă artifact-ul din 17-oct (https://claude.ai/artifact/Uk4NsY9Yc14MKRqop27S8b): l-am adus la zi cu dosarul curent (aceeași cheie pentru bife, deci bifele din ziua vizitei rămân). https://claude.ai/artifact/1Y4PCXAkyCBKfeuHqVCros rămâne pe celălalt cont, publicat fără cele două imagini (planul din anunț și ortofoto-cadastrul).
 
 Mai târziu, pe 23-oct, sesiunea a trecut pe un al treilea cont Claude, care nu avea nicio copie a dosarului: e publicat acolo ca https://claude.ai/artifact/G3ixM9yhxkcTbHD5Sv21Cu, cu ambele imagini. Ca să nu se mai învechească la fiecare schimbare de cont, README-ul și REPORT-ul nu mai dau un link de artifact: fiecare cont își are copia în galeria de artifacts, iar link-ul care merge oricum e pagina GitHub Pages. Seara sesiunea a revenit pe contul de dimineață: copia de acolo (https://claude.ai/artifact/1Y4PCXAkyCBKfeuHqVCros) are acum și cele două imagini.
+
+## Follow-up 2026-11-01 (răspuns către vânzător + arhitecți)
+
+> ok. poti sa:
+> - raspunzi te rog proprietarului - scuze pt intarzierea in raspuns, am primit tot, vorbim cu un arhitect
+> - cauti arhitecti OK din zona care ar putea sa ne ajute - eventual sa estimezi si un pret
+
+Răspunsul către vânzător e pregătit ca răspuns la emailul lui din 20-oct, dar **netrimis**: extensia Chrome nu era conectată (cere ca claude.ai din Chrome să fie pe același cont Claude ca sesiunea), deci n-a existat acces la căsuța de mail. Arhitecții: lista, contactele și prețurile din 23-oct (`arhitecti/REPORT.md`, REPORT.md §1.10) rămân valabile; căutarea locală de atunci acoperea ~15 km, cu nume verificate și eliminate, deci nicio cercetare nouă.
+
